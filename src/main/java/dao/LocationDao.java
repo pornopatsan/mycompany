@@ -1,37 +1,36 @@
 package dao;
 
-import hibernate.EmployeeEntity;
+import hibernate.LocationEntity;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
 
-public class EmployeeDao {
-
-    public EmployeeEntity findById(int id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(EmployeeEntity.class, id);
+public class LocationDao {
+    public LocationEntity findById(int id) {
+        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(LocationEntity.class, id);
     }
 
-    public void save(EmployeeEntity employee) {
+    public void save(LocationEntity location) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.save(employee);
+        session.save(location);
         tx1.commit();
         session.close();
     }
 
-    public void delete(EmployeeEntity employee) {
+    public void delete(LocationEntity location) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.delete(employee);
+        session.delete(location);
         tx1.commit();
         session.close();
     }
 
-    public void update(EmployeeEntity employee) {
+    public void update(LocationEntity location) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.update(employee);
+        session.update(location);
         tx1.commit();
         session.close();
     }
