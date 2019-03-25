@@ -1,0 +1,9 @@
+drop table Employee_Department;
+drop table Department;
+drop table Office;
+drop table Location;
+drop table EmployeeJobs_History;
+drop table Employee;
+drop table Jobs;
+drop table Accounts;
+drop table PersonalData;

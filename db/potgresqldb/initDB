@@ -1,0 +1,95 @@
+create table PersonalData (
+                            id serial,
+                            first_name varchar(16),
+                            last_name varchar(16),
+                            birth_date date,
+
+                            phone varchar(16),
+                            email varchar(32),
+                            address varchar(64),
+                            education varchar(64),
+
+                            photo varchar(16),
+                            self_description varchar(256),
+
+                            PRIMARY KEY (id)
+);
+
+create table Accounts (
+                        login varchar(16),
+                        passwordd char(32),
+                        personal_id int,
+                        PRIMARY KEY (login),
+                        FOREIGN KEY (personal_id) REFERENCES PersonalData(id)
+);
+
+create table Jobs (
+                    id serial,
+                    "function" varchar(20),
+                    PRIMARY KEY (id)
+);
+
+create table Employee (
+                        id serial,
+                        personal_id int,
+                        job_id int,
+                        salary numeric(7,2), -- probably not nessesary here
+                        hire_date date,
+
+                        PRIMARY KEY (id),
+                        FOREIGN KEY (personal_id) REFERENCES PersonalData(id),
+                        FOREIGN KEY (job_id) REFERENCES Jobs(id)
+);
+
+create table EmployeeJobs_History (
+                                    id serial,
+                                    employee_id int,
+                                    job_id int,
+                                    appointment date,
+                                    removal date,
+                                    salary numeric(7,2),
+
+                                    PRIMARY KEY (id),
+                                    FOREIGN KEY (employee_id) REFERENCES Employee(id)
+);
+
+create table Location (
+                        id serial,
+                        country varchar(32),
+                        region varchar(32),
+
+                        PRIMARY KEY(id)
+);
+
+create table Office (
+                      id serial,
+                      location_id int,
+                      phone varchar(16),
+                      address varchar(64),
+                      description varchar(256),
+
+                      PRIMARY KEY(id),
+                      FOREIGN KEY (location_id) REFERENCES Location(id)
+);
+
+create table Department (
+                          id serial,
+                          office_id int,
+                          head_id int,
+                          name varchar(32),
+                          description varchar(256),
+
+                          PRIMARY KEY(id),
+                          FOREIGN KEY (office_id) REFERENCES Office(id),
+                          FOREIGN KEY (head_id) REFERENCES Department(id)
+);
+
+create table Employee_Department (
+                                   id serial,
+                                   employee_id int,
+                                   department_id int,
+
+                                   PRIMARY KEY(id),
+                                   FOREIGN KEY (employee_id) REFERENCES Employee(id),
+                                   FOREIGN KEY (department_id) REFERENCES Department(id)
+);

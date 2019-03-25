@@ -1,0 +1,52 @@
+insert into PersonalData values(default, 'Dilshod', 'Sapaev', '11/08/1998','89613528989', 'Dilshod070@mail.ru', Null, 'MSU', Null, Null);
+insert into PersonalData values(default, 'Emma', 'Stone', '11/06/1988', Null , Null, Null, Null, Null, 'Hot');
+insert into PersonalData values(default, 'Ksenia', 'Kriger', '02/03/1999', Null , Null, Null, 'MSU', Null, Null);
+insert into PersonalData values(default, 'Runyshkin', 'Stanislav', '05/03/1999', Null, Null, Null, 'MSU', Null, Null);
+
+insert into Accounts values('admin', 'admin', 1);
+insert into Accounts values('Dilshod070', 'Password', 1);
+insert into Accounts values('EmmaStoneOficial', 'Password', 2);
+insert into Accounts values('KotDjedaya', 'Password', 3);
+
+insert into Jobs values(default, 'President'); -- 1
+insert into Jobs values(default, 'Manager');
+insert into Jobs values(default, 'HR');
+insert into Jobs values(default, 'System Administrator');
+insert into Jobs values(default, 'Backend Developer'); -- 5
+insert into Jobs values(default, 'Frontend Developer');
+insert into Jobs values(default, 'Analyste');
+insert into Jobs values(default, 'Researcher');
+insert into Jobs values(default, 'Security');
+insert into Jobs values(default, 'Staff'); -- 10
+insert into Jobs values(default, 'Voice Actor');
+insert into Jobs values(default, 'Scenarist');
+
+insert into Employee values(default, 1, 1, 10000.00, '02/23/2019'); -- 1
+insert into Employee values(default, 2, 11, 3000.00, '02/23/2019');
+insert into Employee values(default, 3, 12, 800.00, '02/23/2019');
+
+-- insert only history not including current job! Removal date must not be Null
+--insert into EmployeeJobs_History values(default, 1, 1, '02/23/2019', Null, 10000.00);
+--insert into EmployeeJobs_History values(default, 2, 11, '02/23/2019', Null, 3000.00);
+--insert into EmployeeJobs_History values(default, 3, 12,'02/23/2019', Null, 800.00);
+
+insert into Location values(default, 'Russian Federation', 'Moscow');
+insert into Location values(default, 'Russian Federation', 'St-Petersburg');
+insert into Location values(default, 'Russian Federation', 'Penza');
+
+insert into Office values(default, 1, Null, 'Lomonosovsky pr-ct 27/11', Null);
+
+insert into Department values(default, 1, Null, 'Board of Directors', Null); -- 1
+insert into Department values(default, 1, 1, 'Game Development', Null);
+insert into Department values(default, 1, 1, 'HR', Null);
+insert into Department values(default, 1, 1, 'Research', Null);
+insert into Department values(default, 1, 2, 'Game: Chess', Null); -- 5
+insert into Department values(default, 1, 5, 'Game: Chess - Design', Null);
+insert into Department values(default, 1, 5, 'Game: Chess - Scenary', Null);
+insert into Department values(default, 1, 5, 'Game: Chess - Voice', Null);
+
+insert into Employee_Department values(default, 1, 1);
+insert into Employee_Department values(default, 1, 3);
+insert into Employee_Department values(default, 1, 5);
+insert into Employee_Department values(default, 2, 8);
+insert into Employee_Department values(default, 3, 7);
