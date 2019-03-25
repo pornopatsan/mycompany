@@ -12,6 +12,8 @@ public class EmployeejobsHistoryEntity {
     private Date appointment;
     private Date removal;
     private BigDecimal salary;
+    private Integer employeeId;
+    private EmployeeEntity employeeByEmployeeId;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -87,5 +89,25 @@ public class EmployeejobsHistoryEntity {
         result = 31 * result + (removal != null ? removal.hashCode() : 0);
         result = 31 * result + (salary != null ? salary.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "employee_id", nullable = true)
+    public Integer getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(Integer employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "employee_id", referencedColumnName = "id")
+    public EmployeeEntity getEmployeeByEmployeeId() {
+        return employeeByEmployeeId;
+    }
+
+    public void setEmployeeByEmployeeId(EmployeeEntity employeeByEmployeeId) {
+        this.employeeByEmployeeId = employeeByEmployeeId;
     }
 }

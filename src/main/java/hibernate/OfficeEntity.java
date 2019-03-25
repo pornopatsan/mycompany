@@ -1,6 +1,7 @@
 package hibernate;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Table(name = "office", schema = "public", catalog = "pracbackend")
@@ -9,6 +10,9 @@ public class OfficeEntity {
     private String phone;
     private String address;
     private String description;
+    private Integer locationId;
+    private Collection<DepartmentEntity> departmentsById;
+    private LocationEntity locationByLocationId;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -72,5 +76,34 @@ public class OfficeEntity {
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "location_id", nullable = true)
+    public Integer getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(Integer locationId) {
+        this.locationId = locationId;
+    }
+
+    @OneToMany(mappedBy = "officeByOfficeId")
+    public Collection<DepartmentEntity> getDepartmentsById() {
+        return departmentsById;
+    }
+
+    public void setDepartmentsById(Collection<DepartmentEntity> departmentsById) {
+        this.departmentsById = departmentsById;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "location_id", referencedColumnName = "id")
+    public LocationEntity getLocationByLocationId() {
+        return locationByLocationId;
+    }
+
+    public void setLocationByLocationId(LocationEntity locationByLocationId) {
+        this.locationByLocationId = locationByLocationId;
     }
 }

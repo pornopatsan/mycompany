@@ -7,6 +7,8 @@ import javax.persistence.*;
 public class AccountsEntity {
     private String login;
     private String passwordd;
+    private Integer personalId;
+    private PersonaldataEntity personaldataByPersonalId;
 
     @Id
     @Column(name = "login", nullable = false, length = 16)
@@ -46,5 +48,25 @@ public class AccountsEntity {
         int result = login != null ? login.hashCode() : 0;
         result = 31 * result + (passwordd != null ? passwordd.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "personal_id", nullable = true)
+    public Integer getPersonalId() {
+        return personalId;
+    }
+
+    public void setPersonalId(Integer personalId) {
+        this.personalId = personalId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "personal_id", referencedColumnName = "id")
+    public PersonaldataEntity getPersonaldataByPersonalId() {
+        return personaldataByPersonalId;
+    }
+
+    public void setPersonaldataByPersonalId(PersonaldataEntity personaldataByPersonalId) {
+        this.personaldataByPersonalId = personaldataByPersonalId;
     }
 }

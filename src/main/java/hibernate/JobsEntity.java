@@ -1,12 +1,14 @@
 package hibernate;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Table(name = "jobs", schema = "public", catalog = "pracbackend")
 public class JobsEntity {
     private int id;
     private String function;
+    private Collection<EmployeeEntity> employeesById;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -46,5 +48,14 @@ public class JobsEntity {
         int result = id;
         result = 31 * result + (function != null ? function.hashCode() : 0);
         return result;
+    }
+
+    @OneToMany(mappedBy = "jobsByJobId")
+    public Collection<EmployeeEntity> getEmployeesById() {
+        return employeesById;
+    }
+
+    public void setEmployeesById(Collection<EmployeeEntity> employeesById) {
+        this.employeesById = employeesById;
     }
 }
