@@ -6,18 +6,18 @@ import java.util.Collection;
 @Entity
 @Table(name = "location", schema = "public", catalog = "pracbackend")
 public class LocationEntity {
-    private int id;
+    private Integer id;
     private String country;
     private String region;
     private Collection<OfficeEntity> officesById;
 
     @Id
     @Column(name = "id", nullable = false)
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -48,7 +48,7 @@ public class LocationEntity {
 
         LocationEntity that = (LocationEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (country != null ? !country.equals(that.country) : that.country != null) return false;
         if (region != null ? !region.equals(that.region) : that.region != null) return false;
 
@@ -57,7 +57,7 @@ public class LocationEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (country != null ? country.hashCode() : 0);
         result = 31 * result + (region != null ? region.hashCode() : 0);
         return result;

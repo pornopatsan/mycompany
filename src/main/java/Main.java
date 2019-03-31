@@ -1,3 +1,4 @@
+import hibernate.JobsEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Metamodel;
 import org.hibernate.query.Query;
@@ -7,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 
 import javax.persistence.metamodel.EntityType;
 
-import java.util.Map;
+import java.util.List;
 
 public class Main {
     private static final SessionFactory ourSessionFactory;
@@ -42,6 +43,12 @@ public class Main {
             }
         } finally {
             session.close();
+        }
+
+        dao.JobsDao jd = new dao.JobsDao();
+        List<JobsEntity> jobs = jd.findAll();
+        for (hibernate.JobsEntity job: jobs) {
+            System.out.println(job.getFunction());
         }
     }
 }

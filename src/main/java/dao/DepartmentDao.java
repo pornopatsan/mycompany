@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
 
+import java.util.List;
+
 public class DepartmentDao {
 
     public DepartmentEntity findById(int id) {
@@ -36,4 +38,9 @@ public class DepartmentDao {
         session.close();
     }
 
+    public List<DepartmentEntity> findAll() {
+        List<DepartmentEntity> res = (List<DepartmentEntity>)
+                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From DepartmentEntity").list();
+        return res;
+    }
 }

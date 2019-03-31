@@ -7,7 +7,7 @@ import java.util.Collection;
 @Entity
 @Table(name = "personaldata", schema = "public", catalog = "pracbackend")
 public class PersonaldataEntity {
-    private int id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private Date birthDate;
@@ -22,11 +22,11 @@ public class PersonaldataEntity {
 
     @Id
     @Column(name = "id", nullable = false)
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -127,7 +127,7 @@ public class PersonaldataEntity {
 
         PersonaldataEntity that = (PersonaldataEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (firstName != null ? !firstName.equals(that.firstName) : that.firstName != null) return false;
         if (lastName != null ? !lastName.equals(that.lastName) : that.lastName != null) return false;
         if (birthDate != null ? !birthDate.equals(that.birthDate) : that.birthDate != null) return false;
@@ -144,7 +144,7 @@ public class PersonaldataEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
         result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
         result = 31 * result + (birthDate != null ? birthDate.hashCode() : 0);

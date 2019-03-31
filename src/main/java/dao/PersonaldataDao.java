@@ -9,6 +9,7 @@ import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
 
 import java.util.Collection;
+import java.util.List;
 
 public class PersonaldataDao {
 
@@ -16,7 +17,7 @@ public class PersonaldataDao {
         return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(PersonaldataEntity.class, id);
     }
 
-    public void save(PersonaldataDao personaldata) {
+    public void save(PersonaldataEntity personaldata) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
         session.save(personaldata);
@@ -24,7 +25,7 @@ public class PersonaldataDao {
         session.close();
     }
 
-    public void delete(PersonaldataDao personaldata) {
+    public void delete(PersonaldataEntity personaldata) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
         session.delete(personaldata);
@@ -32,7 +33,7 @@ public class PersonaldataDao {
         session.close();
     }
 
-    public void update(PersonaldataDao personaldata) {
+    public void update(PersonaldataEntity personaldata) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
         session.update(personaldata);
@@ -40,19 +41,10 @@ public class PersonaldataDao {
         session.close();
     }
 
-    Collection<EmployeeEntity> getEmployees() {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        String hql = "from EmployeeEntity";
-        Collection<EmployeeEntity> employee = session.createQuery(hql).list();
-        session.close();
-        return employee;
+    public List<PersonaldataEntity> findAll() {
+        List<PersonaldataEntity> res = (List<PersonaldataEntity>)
+                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From PersonaldataEntity").list();
+        return res;
     }
 
-    Collection<AccountsEntity> getAccounts() {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        String hql = "from AccountsEntity";
-        Collection<AccountsEntity> accounts = session.createQuery(hql).list();
-        session.close();
-        return accounts;
-    }
 }

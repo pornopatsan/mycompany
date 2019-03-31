@@ -7,32 +7,21 @@ import java.sql.Date;
 @Entity
 @Table(name = "employeejobs_history", schema = "public", catalog = "pracbackend")
 public class EmployeejobsHistoryEntity {
-    private int id;
-    private Integer jobId;
+    private Integer id;
     private Date appointment;
     private Date removal;
     private BigDecimal salary;
-    private Integer employeeId;
     private EmployeeEntity employeeByEmployeeId;
+    private JobsEntity jobsByJobId;
 
     @Id
     @Column(name = "id", nullable = false)
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
-    }
-
-    @Basic
-    @Column(name = "job_id", nullable = true)
-    public Integer getJobId() {
-        return jobId;
-    }
-
-    public void setJobId(Integer jobId) {
-        this.jobId = jobId;
     }
 
     @Basic
@@ -72,8 +61,7 @@ public class EmployeejobsHistoryEntity {
 
         EmployeejobsHistoryEntity that = (EmployeejobsHistoryEntity) o;
 
-        if (id != that.id) return false;
-        if (jobId != null ? !jobId.equals(that.jobId) : that.jobId != null) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (appointment != null ? !appointment.equals(that.appointment) : that.appointment != null) return false;
         if (removal != null ? !removal.equals(that.removal) : that.removal != null) return false;
         if (salary != null ? !salary.equals(that.salary) : that.salary != null) return false;
@@ -83,22 +71,11 @@ public class EmployeejobsHistoryEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (jobId != null ? jobId.hashCode() : 0);
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (appointment != null ? appointment.hashCode() : 0);
         result = 31 * result + (removal != null ? removal.hashCode() : 0);
         result = 31 * result + (salary != null ? salary.hashCode() : 0);
         return result;
-    }
-
-    @Basic
-    @Column(name = "employee_id", nullable = true)
-    public Integer getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(Integer employeeId) {
-        this.employeeId = employeeId;
     }
 
     @ManyToOne
@@ -109,5 +86,15 @@ public class EmployeejobsHistoryEntity {
 
     public void setEmployeeByEmployeeId(EmployeeEntity employeeByEmployeeId) {
         this.employeeByEmployeeId = employeeByEmployeeId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "job_id", referencedColumnName = "id")
+    public JobsEntity getJobsByJobId() {
+        return jobsByJobId;
+    }
+
+    public void setJobsByJobId(JobsEntity jobsByJobId) {
+        this.jobsByJobId = jobsByJobId;
     }
 }

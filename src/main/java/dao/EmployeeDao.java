@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
 
+import java.util.List;
+
 public class EmployeeDao {
 
     public EmployeeEntity findById(int id) {
@@ -35,4 +37,11 @@ public class EmployeeDao {
         tx1.commit();
         session.close();
     }
+
+    public List<EmployeeEntity> findAll() {
+        List<EmployeeEntity> res = (List<EmployeeEntity>)
+                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From EmployeeEntity").list();
+        return res;
+    }
+
 }

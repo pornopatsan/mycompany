@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
 
+import java.util.List;
+
 public class AccountsDao {
 
     public AccountsEntity findByLogin(String login) {
@@ -36,4 +38,9 @@ public class AccountsDao {
         session.close();
     }
 
+    public List<AccountsEntity> findAll() {
+        List<AccountsEntity> res = (List<AccountsEntity>)
+                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From AccountsEntity").list();
+        return res;
+    }
 }

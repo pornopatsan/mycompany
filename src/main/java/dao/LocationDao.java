@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
 
+import java.util.List;
+
 public class LocationDao {
     public LocationEntity findById(int id) {
         return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(LocationEntity.class, id);
@@ -33,5 +35,11 @@ public class LocationDao {
         session.update(location);
         tx1.commit();
         session.close();
+    }
+
+    public List<LocationEntity> findAll() {
+        List<LocationEntity> res = (List<LocationEntity>)
+                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From LocationEntity").list();
+        return res;
     }
 }

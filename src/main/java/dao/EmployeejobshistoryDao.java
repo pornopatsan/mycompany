@@ -1,10 +1,13 @@
 package dao;
 
+import hibernate.EmployeeEntity;
 import hibernate.EmployeejobsHistoryEntity;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
+
+import java.util.List;
 
 public class EmployeejobshistoryDao {
 
@@ -34,6 +37,12 @@ public class EmployeejobshistoryDao {
         session.update(history);
         tx1.commit();
         session.close();
+    }
+
+    public List<EmployeejobsHistoryEntity> findAll() {
+        List<EmployeejobsHistoryEntity> res = (List<EmployeejobsHistoryEntity>)
+                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From EmployeejobsHistoryEntity").list();
+        return res;
     }
 
 }

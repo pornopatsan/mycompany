@@ -50,7 +50,8 @@ create table EmployeeJobs_History (
                                     salary numeric(7,2),
 
                                     PRIMARY KEY (id),
-                                    FOREIGN KEY (employee_id) REFERENCES Employee(id)
+                                    FOREIGN KEY (employee_id) REFERENCES Employee(id),
+                                    FOREIGN KEY (job_id) REFERENCES Jobs(id)
 );
 
 create table Location (

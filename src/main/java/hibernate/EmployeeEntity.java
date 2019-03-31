@@ -8,11 +8,9 @@ import java.util.Collection;
 @Entity
 @Table(name = "employee", schema = "public", catalog = "pracbackend")
 public class EmployeeEntity {
-    private int id;
+    private Integer id;
     private BigDecimal salary;
     private Date hireDate;
-    private Integer personalId;
-    private Integer jobId;
     private PersonaldataEntity personaldataByPersonalId;
     private JobsEntity jobsByJobId;
     private Collection<EmployeeDepartmentEntity> employeeDepartmentsById;
@@ -20,11 +18,11 @@ public class EmployeeEntity {
 
     @Id
     @Column(name = "id", nullable = false)
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -55,7 +53,7 @@ public class EmployeeEntity {
 
         EmployeeEntity that = (EmployeeEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (salary != null ? !salary.equals(that.salary) : that.salary != null) return false;
         if (hireDate != null ? !hireDate.equals(that.hireDate) : that.hireDate != null) return false;
 
@@ -64,30 +62,10 @@ public class EmployeeEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (salary != null ? salary.hashCode() : 0);
         result = 31 * result + (hireDate != null ? hireDate.hashCode() : 0);
         return result;
-    }
-
-    @Basic
-    @Column(name = "personal_id", nullable = true)
-    public Integer getPersonalId() {
-        return personalId;
-    }
-
-    public void setPersonalId(Integer personalId) {
-        this.personalId = personalId;
-    }
-
-    @Basic
-    @Column(name = "job_id", nullable = true)
-    public Integer getJobId() {
-        return jobId;
-    }
-
-    public void setJobId(Integer jobId) {
-        this.jobId = jobId;
     }
 
     @ManyToOne

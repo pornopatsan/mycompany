@@ -18,6 +18,7 @@ public class HibernateSessionFactoryUtil {
                 Configuration configuration = new Configuration().configure();
                 configuration.addAnnotatedClass(AccountsEntity.class);
                 configuration.addAnnotatedClass(DepartmentEntity.class);
+                configuration.addAnnotatedClass(EmployeeDepartmentEntity.class);
                 configuration.addAnnotatedClass(EmployeeEntity.class);
                 configuration.addAnnotatedClass(EmployeejobsHistoryEntity.class);
                 configuration.addAnnotatedClass(JobsEntity.class);
@@ -26,7 +27,6 @@ public class HibernateSessionFactoryUtil {
                 configuration.addAnnotatedClass(PersonaldataEntity.class);
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
                 sessionFactory = configuration.buildSessionFactory(builder.build());
-
             } catch (Exception e) {
                 System.out.println("Исключение!" + e);
             }

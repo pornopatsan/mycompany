@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
 
+import java.util.List;
+
 public class OfficeDao {
     public OfficeEntity findById(int id) {
         return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(OfficeEntity.class, id);
@@ -33,5 +35,11 @@ public class OfficeDao {
         session.update(office);
         tx1.commit();
         session.close();
+    }
+
+    public List<OfficeEntity> findAll() {
+        List<OfficeEntity> res = (List<OfficeEntity>)
+                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From OfficeEntity").list();
+        return res;
     }
 }

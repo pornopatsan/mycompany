@@ -6,23 +6,21 @@ import java.util.Collection;
 @Entity
 @Table(name = "department", schema = "public", catalog = "pracbackend")
 public class DepartmentEntity {
-    private int id;
+    private Integer id;
     private String name;
     private String description;
-    private Integer officeId;
-    private Integer headId;
-    private OfficeEntity officeByOfficeId;
     private DepartmentEntity departmentByHeadId;
+    private OfficeEntity officeByOfficeId;
     private Collection<DepartmentEntity> departmentsById;
     private Collection<EmployeeDepartmentEntity> employeeDepartmentsById;
 
     @Id
     @Column(name = "id", nullable = false)
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -53,7 +51,7 @@ public class DepartmentEntity {
 
         DepartmentEntity that = (DepartmentEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
         if (description != null ? !description.equals(that.description) : that.description != null) return false;
 
@@ -62,40 +60,10 @@ public class DepartmentEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
-    }
-
-    @Basic
-    @Column(name = "office_id", nullable = true)
-    public Integer getOfficeId() {
-        return officeId;
-    }
-
-    public void setOfficeId(Integer officeId) {
-        this.officeId = officeId;
-    }
-
-    @Basic
-    @Column(name = "head_id", nullable = true)
-    public Integer getHeadId() {
-        return headId;
-    }
-
-    public void setHeadId(Integer headId) {
-        this.headId = headId;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "office_id", referencedColumnName = "id")
-    public OfficeEntity getOfficeByOfficeId() {
-        return officeByOfficeId;
-    }
-
-    public void setOfficeByOfficeId(OfficeEntity officeByOfficeId) {
-        this.officeByOfficeId = officeByOfficeId;
     }
 
     @ManyToOne
@@ -106,6 +74,16 @@ public class DepartmentEntity {
 
     public void setDepartmentByHeadId(DepartmentEntity departmentByHeadId) {
         this.departmentByHeadId = departmentByHeadId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "office_id", referencedColumnName = "id")
+    public OfficeEntity getOfficeByOfficeId() {
+        return officeByOfficeId;
+    }
+
+    public void setOfficeByOfficeId(OfficeEntity officeByOfficeId) {
+        this.officeByOfficeId = officeByOfficeId;
     }
 
     @OneToMany(mappedBy = "departmentByHeadId")

@@ -6,21 +6,20 @@ import java.util.Collection;
 @Entity
 @Table(name = "office", schema = "public", catalog = "pracbackend")
 public class OfficeEntity {
-    private int id;
+    private Integer id;
     private String phone;
     private String address;
     private String description;
-    private Integer locationId;
-    private Collection<DepartmentEntity> departmentsById;
     private LocationEntity locationByLocationId;
+    private Collection<DepartmentEntity> departmentsById;
 
     @Id
     @Column(name = "id", nullable = false)
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -61,7 +60,7 @@ public class OfficeEntity {
 
         OfficeEntity that = (OfficeEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (phone != null ? !phone.equals(that.phone) : that.phone != null) return false;
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
         if (description != null ? !description.equals(that.description) : that.description != null) return false;
@@ -71,30 +70,11 @@ public class OfficeEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
-    }
-
-    @Basic
-    @Column(name = "location_id", nullable = true)
-    public Integer getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(Integer locationId) {
-        this.locationId = locationId;
-    }
-
-    @OneToMany(mappedBy = "officeByOfficeId")
-    public Collection<DepartmentEntity> getDepartmentsById() {
-        return departmentsById;
-    }
-
-    public void setDepartmentsById(Collection<DepartmentEntity> departmentsById) {
-        this.departmentsById = departmentsById;
     }
 
     @ManyToOne
@@ -105,5 +85,14 @@ public class OfficeEntity {
 
     public void setLocationByLocationId(LocationEntity locationByLocationId) {
         this.locationByLocationId = locationByLocationId;
+    }
+
+    @OneToMany(mappedBy = "officeByOfficeId")
+    public Collection<DepartmentEntity> getDepartmentsById() {
+        return departmentsById;
+    }
+
+    public void setDepartmentsById(Collection<DepartmentEntity> departmentsById) {
+        this.departmentsById = departmentsById;
     }
 }

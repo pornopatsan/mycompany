@@ -5,40 +5,18 @@ import javax.persistence.*;
 @Entity
 @Table(name = "employee_department", schema = "public", catalog = "pracbackend")
 public class EmployeeDepartmentEntity {
-    private int id;
-    private Integer employeeId;
-    private Integer departmentId;
+    private Integer id;
     private EmployeeEntity employeeByEmployeeId;
     private DepartmentEntity departmentByDepartmentId;
 
     @Id
     @Column(name = "id", nullable = false)
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
-    }
-
-    @Basic
-    @Column(name = "employee_id", nullable = true)
-    public Integer getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(Integer employeeId) {
-        this.employeeId = employeeId;
-    }
-
-    @Basic
-    @Column(name = "department_id", nullable = true)
-    public Integer getDepartmentId() {
-        return departmentId;
-    }
-
-    public void setDepartmentId(Integer departmentId) {
-        this.departmentId = departmentId;
     }
 
     @Override
@@ -48,19 +26,14 @@ public class EmployeeDepartmentEntity {
 
         EmployeeDepartmentEntity that = (EmployeeDepartmentEntity) o;
 
-        if (id != that.id) return false;
-        if (employeeId != null ? !employeeId.equals(that.employeeId) : that.employeeId != null) return false;
-        if (departmentId != null ? !departmentId.equals(that.departmentId) : that.departmentId != null) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (employeeId != null ? employeeId.hashCode() : 0);
-        result = 31 * result + (departmentId != null ? departmentId.hashCode() : 0);
-        return result;
+        return id != null ? id.hashCode() : 0;
     }
 
     @ManyToOne
