@@ -9,25 +9,11 @@ import static org.junit.Assert.*;
 
 public class JobsDaoTest {
 
-    private JobsDao dao;
-    private static boolean ok = true;
-
-    @BeforeClass
-    public static void beforeClass() throws Exception {
-        System.out.println("Testing: JobsDao");
-    }
-
-    @AfterClass
-    public static void afterClass() throws Exception {
-        if (ok) {
-            System.out.println("OK");
-        } else {
-            System.out.println("FAILED");
-        }
-    }
+    private JobsDao _dao;
 
     @Before
     public void setUp() throws Exception {
+        _dao = new JobsDao();
     }
 
     @After
@@ -36,26 +22,29 @@ public class JobsDaoTest {
 
     @Test
     public void findById() {
+        assertEquals(_dao.findById(1).getFunction(), "President");
     }
 
     @Test
-    public void save() {
-    }
-
-    @Test
-    public void delete() {
-    }
-
-    @Test
-    public void update() {
+    public void save_update_delete() {
+        JobsEntity tmp = new JobsEntity();
+        tmp.setId(-1);
+        tmp.setFunction("TEST_ENTITY");
+        _dao.save(tmp);
+        assertEquals(_dao.findById(-1).getFunction(), "TEST_ENTITY");
+        tmp.setFunction("NEW_TEST_ENTITY");
+        _dao.update(tmp);
+        assertEquals(_dao.findById(-1).getFunction(), "NEW_TEST_ENTITY");
+        _dao.delete(tmp);
+        assertNull(_dao.findById(-1));
     }
 
     @Test
     public void findAll() {
-//        dao.JobsDao jd = new dao.JobsDao();
-//        List<JobsEntity> jobs = jd.findAll();
-//        for (hibernate.JobsEntity job: jobs) {
-//            System.out.println(job.getFunction());
-//        }
+        List<JobsEntity> _list = _dao.findAll();
+        assertEquals(_list.size(), 12);
+        assertEquals(_list.get(0).getFunction(), "President");
+        assertEquals(_list.get(1).getFunction(), "Manager");
+        assertEquals(_list.get(2).getFunction(), "HR");
     }
 }

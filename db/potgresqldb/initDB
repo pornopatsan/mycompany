@@ -17,7 +17,7 @@ create table PersonalData (
 
 create table Accounts (
                         login varchar(16),
-                        passwordd char(32),
+                        passwordd varchar(32),
                         personal_id int,
                         PRIMARY KEY (login),
                         FOREIGN KEY (personal_id) REFERENCES PersonalData(id)

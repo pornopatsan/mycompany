@@ -11,7 +11,7 @@ import java.util.List;
 
 public class EmployeejobshistoryDao {
 
-    public EmployeejobsHistoryEntity findByLogin(int id) {
+    public EmployeejobsHistoryEntity findById(int id) {
         return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(EmployeejobsHistoryEntity.class, id);
     }
 

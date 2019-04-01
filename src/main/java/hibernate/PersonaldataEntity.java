@@ -2,7 +2,7 @@ package hibernate;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "personaldata", schema = "public", catalog = "pracbackend")
@@ -17,8 +17,8 @@ public class PersonaldataEntity {
     private String education;
     private String photo;
     private String selfDescription;
-    private Collection<AccountsEntity> accountsById;
-    private Collection<EmployeeEntity> employeesById;
+    private List<AccountsEntity> accountsById;
+    private List<EmployeeEntity> employeesById;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -158,20 +158,20 @@ public class PersonaldataEntity {
     }
 
     @OneToMany(mappedBy = "personaldataByPersonalId")
-    public Collection<AccountsEntity> getAccountsById() {
+    public List<AccountsEntity> getAccountsById() {
         return accountsById;
     }
 
-    public void setAccountsById(Collection<AccountsEntity> accountsById) {
+    public void setAccountsById(List<AccountsEntity> accountsById) {
         this.accountsById = accountsById;
     }
 
     @OneToMany(mappedBy = "personaldataByPersonalId")
-    public Collection<EmployeeEntity> getEmployeesById() {
+    public List<EmployeeEntity> getEmployeesById() {
         return employeesById;
     }
 
-    public void setEmployeesById(Collection<EmployeeEntity> employeesById) {
+    public void setEmployeesById(List<EmployeeEntity> employeesById) {
         this.employeesById = employeesById;
     }
 }

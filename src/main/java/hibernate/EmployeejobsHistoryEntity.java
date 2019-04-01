@@ -1,7 +1,6 @@
 package hibernate;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.sql.Date;
 
 @Entity
@@ -10,7 +9,7 @@ public class EmployeejobsHistoryEntity {
     private Integer id;
     private Date appointment;
     private Date removal;
-    private BigDecimal salary;
+    private double salary;
     private EmployeeEntity employeeByEmployeeId;
     private JobsEntity jobsByJobId;
 
@@ -46,11 +45,11 @@ public class EmployeejobsHistoryEntity {
 
     @Basic
     @Column(name = "salary", nullable = true, precision = 2)
-    public BigDecimal getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(BigDecimal salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
@@ -64,7 +63,7 @@ public class EmployeejobsHistoryEntity {
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (appointment != null ? !appointment.equals(that.appointment) : that.appointment != null) return false;
         if (removal != null ? !removal.equals(that.removal) : that.removal != null) return false;
-        if (salary != null ? !salary.equals(that.salary) : that.salary != null) return false;
+        if (salary - that.salary > 0.0001) return false;
 
         return true;
     }
@@ -74,7 +73,6 @@ public class EmployeejobsHistoryEntity {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (appointment != null ? appointment.hashCode() : 0);
         result = 31 * result + (removal != null ? removal.hashCode() : 0);
-        result = 31 * result + (salary != null ? salary.hashCode() : 0);
         return result;
     }
 

@@ -1,7 +1,7 @@
 package hibernate;
 
 import javax.persistence.*;
-import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "department", schema = "public", catalog = "pracbackend")
@@ -11,8 +11,8 @@ public class DepartmentEntity {
     private String description;
     private DepartmentEntity departmentByHeadId;
     private OfficeEntity officeByOfficeId;
-    private Collection<DepartmentEntity> departmentsById;
-    private Collection<EmployeeDepartmentEntity> employeeDepartmentsById;
+    private List<DepartmentEntity> departmentsById;
+    private List<EmployeeDepartmentEntity> employeeDepartmentsById;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -87,20 +87,20 @@ public class DepartmentEntity {
     }
 
     @OneToMany(mappedBy = "departmentByHeadId")
-    public Collection<DepartmentEntity> getDepartmentsById() {
+    public List<DepartmentEntity> getDepartmentsById() {
         return departmentsById;
     }
 
-    public void setDepartmentsById(Collection<DepartmentEntity> departmentsById) {
+    public void setDepartmentsById(List<DepartmentEntity> departmentsById) {
         this.departmentsById = departmentsById;
     }
 
     @OneToMany(mappedBy = "departmentByDepartmentId")
-    public Collection<EmployeeDepartmentEntity> getEmployeeDepartmentsById() {
+    public List<EmployeeDepartmentEntity> getEmployeeDepartmentsById() {
         return employeeDepartmentsById;
     }
 
-    public void setEmployeeDepartmentsById(Collection<EmployeeDepartmentEntity> employeeDepartmentsById) {
+    public void setEmployeeDepartmentsById(List<EmployeeDepartmentEntity> employeeDepartmentsById) {
         this.employeeDepartmentsById = employeeDepartmentsById;
     }
 }

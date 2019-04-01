@@ -3,18 +3,18 @@ package hibernate;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
-import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "employee", schema = "public", catalog = "pracbackend")
 public class EmployeeEntity {
     private Integer id;
-    private BigDecimal salary;
+    private double salary;
     private Date hireDate;
     private PersonaldataEntity personaldataByPersonalId;
     private JobsEntity jobsByJobId;
-    private Collection<EmployeeDepartmentEntity> employeeDepartmentsById;
-    private Collection<EmployeejobsHistoryEntity> employeejobsHistoriesById;
+    private List<EmployeeDepartmentEntity> employeeDepartmentsById;
+    private List<EmployeejobsHistoryEntity> employeejobsHistoriesById;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -28,11 +28,11 @@ public class EmployeeEntity {
 
     @Basic
     @Column(name = "salary", nullable = true, precision = 2)
-    public BigDecimal getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(BigDecimal salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
@@ -54,16 +54,14 @@ public class EmployeeEntity {
         EmployeeEntity that = (EmployeeEntity) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (salary != null ? !salary.equals(that.salary) : that.salary != null) return false;
+        if (salary - that.salary > 0.0001) return false;
         if (hireDate != null ? !hireDate.equals(that.hireDate) : that.hireDate != null) return false;
 
         return true;
     }
 
-    @Override
-    public int hashCode() {
+    public int hashCode(double salary) {
         int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (salary != null ? salary.hashCode() : 0);
         result = 31 * result + (hireDate != null ? hireDate.hashCode() : 0);
         return result;
     }
@@ -89,20 +87,20 @@ public class EmployeeEntity {
     }
 
     @OneToMany(mappedBy = "employeeByEmployeeId")
-    public Collection<EmployeeDepartmentEntity> getEmployeeDepartmentsById() {
+    public List<EmployeeDepartmentEntity> getEmployeeDepartmentsById() {
         return employeeDepartmentsById;
     }
 
-    public void setEmployeeDepartmentsById(Collection<EmployeeDepartmentEntity> employeeDepartmentsById) {
+    public void setEmployeeDepartmentsById(List<EmployeeDepartmentEntity> employeeDepartmentsById) {
         this.employeeDepartmentsById = employeeDepartmentsById;
     }
 
     @OneToMany(mappedBy = "employeeByEmployeeId")
-    public Collection<EmployeejobsHistoryEntity> getEmployeejobsHistoriesById() {
+    public List<EmployeejobsHistoryEntity> getEmployeejobsHistoriesById() {
         return employeejobsHistoriesById;
     }
 
-    public void setEmployeejobsHistoriesById(Collection<EmployeejobsHistoryEntity> employeejobsHistoriesById) {
+    public void setEmployeejobsHistoriesById(List<EmployeejobsHistoryEntity> employeejobsHistoriesById) {
         this.employeejobsHistoriesById = employeejobsHistoriesById;
     }
 }

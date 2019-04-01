@@ -1,7 +1,7 @@
 package hibernate;
 
 import javax.persistence.*;
-import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "office", schema = "public", catalog = "pracbackend")
@@ -11,7 +11,7 @@ public class OfficeEntity {
     private String address;
     private String description;
     private LocationEntity locationByLocationId;
-    private Collection<DepartmentEntity> departmentsById;
+    private List<DepartmentEntity> departmentsById;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -88,11 +88,11 @@ public class OfficeEntity {
     }
 
     @OneToMany(mappedBy = "officeByOfficeId")
-    public Collection<DepartmentEntity> getDepartmentsById() {
+    public List<DepartmentEntity> getDepartmentsById() {
         return departmentsById;
     }
 
-    public void setDepartmentsById(Collection<DepartmentEntity> departmentsById) {
+    public void setDepartmentsById(List<DepartmentEntity> departmentsById) {
         this.departmentsById = departmentsById;
     }
 }
