@@ -4,7 +4,6 @@ import hibernate.AccountsEntity;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import sun.security.util.Length;
 
 import java.util.List;
 
@@ -25,12 +24,12 @@ public class AccountsDaoTest {
 
     @Test
     public void findByLogin() {
-        // Spaces after password if bad
         assertEquals(_dao.findByLogin("admin").getPasswordd(), "admin");
+        assertNull(_dao.findByLogin("ADMIN"));
     }
 
     @Test
-    public void save_update_delete() {
+    public void saveUpdateDelete() {
         AccountsEntity tmp = new AccountsEntity();
         tmp.setLogin("TEST_LOGIN");
         tmp.setPasswordd("TEST_PASSWORD");
@@ -46,6 +45,13 @@ public class AccountsDaoTest {
     @Test
     public void findAll() {
         List<AccountsEntity> _list = _dao.findAll();
-        assertEquals(_list.size(), 4);
+        boolean contains_admin = false;
+        for (AccountsEntity i: _list) {
+            if (i.getLogin().equals("admin")) {
+                contains_admin = true;
+                assertEquals(i.getPasswordd(), "admin");
+            }
+        }
+        assertTrue(contains_admin);
     }
 }

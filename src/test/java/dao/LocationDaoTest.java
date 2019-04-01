@@ -24,7 +24,8 @@ public class LocationDaoTest {
 
     @Test
     public void findById() {
-        assertEquals(_dao.findById(1).getRegion(), "Moscow");
+        assertEquals("Moscow", _dao.findById(1).getRegion());
+        assertNull(_dao.findById(-1));
     }
 
     @Test
@@ -33,10 +34,10 @@ public class LocationDaoTest {
         tmp.setId(-1);
         tmp.setRegion("TEST_ENTITY");
         _dao.save(tmp);
-        assertEquals(_dao.findById(-1).getRegion(), "TEST_ENTITY");
+        assertEquals("TEST_ENTITY", _dao.findById(-1).getRegion());
         tmp.setRegion("NEW_TEST_ENTITY");
         _dao.update(tmp);
-        assertEquals(_dao.findById(-1).getRegion(), "NEW_TEST_ENTITY");
+        assertEquals("NEW_TEST_ENTITY", _dao.findById(-1).getRegion());
         _dao.delete(tmp);
         assertNull(_dao.findById(-1));
     }
@@ -44,9 +45,6 @@ public class LocationDaoTest {
     @Test
     public void findAll() {
         List<LocationEntity> _list = _dao.findAll();
-        assertEquals(_list.size(), 3);
-        assertEquals(_list.get(0).getRegion(), "Moscow");
-        assertEquals(_list.get(1).getRegion(), "St-Petersburg");
-        assertEquals(_list.get(2).getRegion(), "Penza");
+        assertEquals("Moscow", _list.get(0).getRegion());
     }
 }

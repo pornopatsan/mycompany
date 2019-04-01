@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
 public class EmployeejobshistoryDaoTest {
 
     public EmployeejobshistoryDao _dao;
+    private static final double eps = 0.001;
 
     @Before
     public void setUp() throws Exception {
@@ -24,7 +25,7 @@ public class EmployeejobshistoryDaoTest {
 
     @Test
     public void findById() {
-        assertNull(_dao.findById(1));
+        assertNull(_dao.findById(-1));
     }
 
     @Test
@@ -33,10 +34,10 @@ public class EmployeejobshistoryDaoTest {
         tmp.setId(-1);
         tmp.setSalary(-1.00);
         _dao.save(tmp);
-        assertEquals(_dao.findById(-1).getSalary(), -1.00, 0.0001);
+        assertEquals(-1.00, _dao.findById(-1).getSalary(), eps);
         tmp.setSalary(-2.00);
         _dao.update(tmp);
-        assertEquals(_dao.findById(-1).getSalary(), -2.00, 0.0001);
+        assertEquals(-2.00, _dao.findById(-1).getSalary(), eps);
         _dao.delete(tmp);
         assertNull(_dao.findById(-1));
     }
@@ -44,6 +45,6 @@ public class EmployeejobshistoryDaoTest {
     @Test
     public void findAll() {
         List<EmployeejobsHistoryEntity> _list = _dao.findAll();
-        assertEquals(_list.size(), 0);
+        assertNotNull(_list);
     }
 }

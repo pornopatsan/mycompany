@@ -24,7 +24,8 @@ public class PersonaldataDaoTest {
 
     @Test
     public void findById() {
-        assertEquals(_dao.findById(1).getFirstName(), "Dilshod");
+        assertEquals("Dilshod", _dao.findById(1).getFirstName());
+        assertNull(_dao.findById(-1));
     }
 
     @Test
@@ -33,10 +34,10 @@ public class PersonaldataDaoTest {
         tmp.setId(-1);
         tmp.setFirstName("TEST_ENTITY");
         _dao.save(tmp);
-        assertEquals(_dao.findById(-1).getFirstName(), "TEST_ENTITY");
+        assertEquals("TEST_ENTITY", _dao.findById(-1).getFirstName());
         tmp.setFirstName("NEW_TEST_ENTITY");
         _dao.update(tmp);
-        assertEquals(_dao.findById(-1).getFirstName(), "NEW_TEST_ENTITY");
+        assertEquals("NEW_TEST_ENTITY", _dao.findById(-1).getFirstName());
         _dao.delete(tmp);
         assertNull(_dao.findById(-1));
     }
@@ -44,9 +45,6 @@ public class PersonaldataDaoTest {
     @Test
     public void findAll() {
         List<PersonaldataEntity> _list = _dao.findAll();
-        assertEquals(_list.size(), 4);
-        assertEquals(_list.get(0).getFirstName(), "Dilshod");
-        assertEquals(_list.get(1).getFirstName(), "Emma");
-        assertEquals(_list.get(2).getFirstName(), "Ksenia");
+        assertEquals("Dilshod", _list.get(0).getFirstName());
     }
 }

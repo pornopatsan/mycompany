@@ -22,7 +22,8 @@ public class JobsDaoTest {
 
     @Test
     public void findById() {
-        assertEquals(_dao.findById(1).getFunction(), "President");
+        assertEquals("President", _dao.findById(1).getFunction());
+        assertNull(_dao.findById(-1));
     }
 
     @Test
@@ -31,10 +32,10 @@ public class JobsDaoTest {
         tmp.setId(-1);
         tmp.setFunction("TEST_ENTITY");
         _dao.save(tmp);
-        assertEquals(_dao.findById(-1).getFunction(), "TEST_ENTITY");
+        assertEquals("TEST_ENTITY", _dao.findById(-1).getFunction());
         tmp.setFunction("NEW_TEST_ENTITY");
         _dao.update(tmp);
-        assertEquals(_dao.findById(-1).getFunction(), "NEW_TEST_ENTITY");
+        assertEquals("NEW_TEST_ENTITY", _dao.findById(-1).getFunction());
         _dao.delete(tmp);
         assertNull(_dao.findById(-1));
     }
@@ -42,9 +43,6 @@ public class JobsDaoTest {
     @Test
     public void findAll() {
         List<JobsEntity> _list = _dao.findAll();
-        assertEquals(_list.size(), 12);
-        assertEquals(_list.get(0).getFunction(), "President");
-        assertEquals(_list.get(1).getFunction(), "Manager");
-        assertEquals(_list.get(2).getFunction(), "HR");
+        assertEquals("President", _list.get(0).getFunction());
     }
 }

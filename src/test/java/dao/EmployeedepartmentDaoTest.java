@@ -24,7 +24,7 @@ public class EmployeedepartmentDaoTest {
 
     @Test
     public void findById() {
-        assertEquals(_dao.findById(1).getDepartmentByDepartmentId().getName(), "Board of Directors");
+        assertEquals("Board of Directors", _dao.findById(1).getDepartmentByDepartmentId().getName());
     }
 
     @Test
@@ -40,6 +40,6 @@ public class EmployeedepartmentDaoTest {
     @Test
     public void findAll() {
         List<EmployeeDepartmentEntity> _list = _dao.findAll();
-        assertEquals(_list.size(), 5);
+        assertEquals("Board of Directors", _list.get(0).getDepartmentByDepartmentId().getName());
     }
 }

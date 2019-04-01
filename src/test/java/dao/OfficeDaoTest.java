@@ -24,7 +24,8 @@ public class OfficeDaoTest {
 
     @Test
     public void findById() {
-        assertEquals(_dao.findById(1).getAddress(), "Lomonosovsky pr-ct 27/11");
+        assertEquals("Lomonosovsky pr-ct 27/11", _dao.findById(1).getAddress());
+        assertNull(_dao.findById(-1));
     }
 
     @Test
@@ -33,10 +34,10 @@ public class OfficeDaoTest {
         tmp.setId(-1);
         tmp.setAddress("TEST_ENTITY");
         _dao.save(tmp);
-        assertEquals(_dao.findById(-1).getAddress(), "TEST_ENTITY");
+        assertEquals("TEST_ENTITY", _dao.findById(-1).getAddress());
         tmp.setAddress("NEW_TEST_ENTITY");
         _dao.update(tmp);
-        assertEquals(_dao.findById(-1).getAddress(), "NEW_TEST_ENTITY");
+        assertEquals("NEW_TEST_ENTITY", _dao.findById(-1).getAddress());
         _dao.delete(tmp);
         assertNull(_dao.findById(-1));
     }
@@ -44,7 +45,6 @@ public class OfficeDaoTest {
     @Test
     public void findAll() {
         List<OfficeEntity> _list = _dao.findAll();
-        assertEquals(_list.size(), 1);
-        assertEquals(_list.get(0).getAddress(), "Lomonosovsky pr-ct 27/11");
+        assertEquals("Lomonosovsky pr-ct 27/11", _list.get(0).getAddress());
     }
 }

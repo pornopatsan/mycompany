@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.sql.Date;
 import java.util.List;
 import java.math.BigDecimal;
 
@@ -13,6 +14,7 @@ import static org.junit.Assert.*;
 public class EmployeeDaoTest {
 
     private EmployeeDao _dao;
+    private static final double eps = 0.001;
 
     @Before
     public void setUp() throws Exception {
@@ -25,19 +27,23 @@ public class EmployeeDaoTest {
 
     @Test
     public void findById() {
-        assertEquals(_dao.findById(1).getSalary(), 10000.00, 0.0001);
+        assertEquals(10000.00, _dao.findById(1).getSalary(), eps);
+        // Какой странный конструктор
+        Date expected = new Date(2019 - 1900, 2 - 1, 23);
+        assertEquals(expected, _dao.findById(1).getHireDate());
+        assertNull(_dao.findById(-1));
     }
 
     @Test
-    public void save_update_delete() {
+    public void saveUpdateDelete() {
         EmployeeEntity tmp = new EmployeeEntity();
         tmp.setId(-1);
-        tmp.setSalary(-1);
+        tmp.setSalary(-1.00);
         _dao.save(tmp);
-        assertEquals(_dao.findById(-1).getSalary(), -1.00, 0.0001);
-        tmp.setSalary(-2);
+        assertEquals(_dao.findById(-1).getSalary(), -1.00, eps);
+        tmp.setSalary(-2.00);
         _dao.update(tmp);
-        assertEquals(_dao.findById(-1).getSalary(), -2.00, 0.0001);
+        assertEquals(_dao.findById(-1).getSalary(), -2.00, eps);
         _dao.delete(tmp);
         assertNull(_dao.findById(-1));
     }
@@ -45,9 +51,8 @@ public class EmployeeDaoTest {
     @Test
     public void findAll() {
         List<EmployeeEntity> _list = _dao.findAll();
-        assertEquals(_list.size(), 3);
-        assertEquals(_list.get(0).getSalary(), 10000.00, 0.0001);
-        assertEquals(_list.get(1).getSalary(),3000.00, 0.0001);
-        assertEquals(_list.get(2).getSalary(),800.00, 0.0001);
+        assertEquals(_list.get(0).getSalary(), 10000.00, eps);
+        assertEquals(_list.get(1).getSalary(),3000.00, eps);
+        assertEquals(_list.get(2).getSalary(),800.00, eps);
     }
 }
