@@ -29,7 +29,7 @@ public class EmployeejobshistoryDaoTest {
     }
 
     @Test
-    public void save_update_delete() {
+    public void saveUpdateDelete() {
         EmployeejobsHistoryEntity tmp = new EmployeejobsHistoryEntity();
         tmp.setId(-1);
         tmp.setSalary(-1.00);
@@ -47,4 +47,5 @@ public class EmployeejobshistoryDaoTest {
         List<EmployeejobsHistoryEntity> _list = _dao.findAll();
         assertNotNull(_list);
     }
+
 }

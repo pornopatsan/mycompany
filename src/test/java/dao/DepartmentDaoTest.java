@@ -36,10 +36,8 @@ public class DepartmentDaoTest {
         _dao.save(tmp);
         assertEquals("TEST_ENTITY", _dao.findById(-1).getName());
         tmp.setName("NEW_TEST_ENTITY");
-//        tmp.setDescription("DESCRIPTION");
         _dao.update(tmp);
         assertEquals("NEW_TEST_ENTITY", _dao.findById(-1).getName());
-//        assertEquals("DESCRIPTION", _dao.findById(-1).getDescription());
         _dao.delete(tmp);
         assertNull(_dao.findById(-1));
     }
@@ -63,12 +61,11 @@ public class DepartmentDaoTest {
     @Test
     public void updateDescription() {
         DepartmentEntity tmp = _dao.findById(1);
-        assertEquals(1, tmp.getId().intValue());
         String prev = tmp.getDescription();
         tmp.setDescription("DESCRIPTION");
         _dao.update(tmp);
         assertEquals("DESCRIPTION", _dao.findById(1).getDescription());
-        tmp.setDescription(null);
+        tmp.setDescription(prev);
         _dao.update(tmp);
     }
 

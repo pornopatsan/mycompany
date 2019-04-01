@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 public class LocationDaoTest {
 
-    public LocationDao _dao;
+    private LocationDao _dao;
 
     @Before
     public void setUp() throws Exception {
@@ -25,11 +25,12 @@ public class LocationDaoTest {
     @Test
     public void findById() {
         assertEquals("Moscow", _dao.findById(1).getRegion());
+        assertEquals("Russian Federation", _dao.findById(1).getCountry());
         assertNull(_dao.findById(-1));
     }
 
     @Test
-    public void save_update_delete() {
+    public void saveUpdateDelete() {
         LocationEntity tmp = new LocationEntity();
         tmp.setId(-1);
         tmp.setRegion("TEST_ENTITY");
@@ -45,6 +46,9 @@ public class LocationDaoTest {
     @Test
     public void findAll() {
         List<LocationEntity> _list = _dao.findAll();
-        assertEquals("Moscow", _list.get(0).getRegion());
+        for (LocationEntity i: _list) {
+            assertEquals(i.getRegion(), _dao.findById(i.getId()).getRegion());
+        }
     }
+
 }

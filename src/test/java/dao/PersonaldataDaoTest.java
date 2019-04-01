@@ -29,7 +29,7 @@ public class PersonaldataDaoTest {
     }
 
     @Test
-    public void save_update_delete() {
+    public void saveUpdateDelete() {
         PersonaldataEntity tmp = new PersonaldataEntity();
         tmp.setId(-1);
         tmp.setFirstName("TEST_ENTITY");
@@ -45,6 +45,33 @@ public class PersonaldataDaoTest {
     @Test
     public void findAll() {
         List<PersonaldataEntity> _list = _dao.findAll();
-        assertEquals("Dilshod", _list.get(0).getFirstName());
+        assertNotNull(_list);
     }
+
+    @Test
+    public void updateFields() {
+        PersonaldataEntity tmp = _dao.findById(1);
+        String prev_self_description = tmp.getSelfDescription();
+        String prev_phone = tmp.getPhone();
+        String prev_address = tmp.getAddress();
+        String prev_email = tmp.getEmail();
+
+        tmp.setSelfDescription("DESCRIPTION");
+        tmp.setPhone("PHONE");
+        tmp.setAddress("ADDRESS");
+        tmp.setEmail("EMAIL");
+        _dao.update(tmp);
+
+        assertEquals("DESCRIPTION", _dao.findById(1).getSelfDescription());
+        assertEquals("PHONE", _dao.findById(1).getPhone());
+        assertEquals("ADDRESS", _dao.findById(1).getAddress());
+        assertEquals("EMAIL", _dao.findById(1).getEmail());
+
+        tmp.setSelfDescription(prev_self_description);
+        tmp.setPhone(prev_phone);
+        tmp.setAddress(prev_address);
+        tmp.setEmail(prev_email);
+        _dao.update(tmp);
+    }
+
 }

@@ -1,7 +1,7 @@
-insert into PersonalData values(default, 'Dilshod', 'Sapaev', '11/08/1998','89613528989', 'Dilshod070@mail.ru', Null, 'MSU', Null, Null);
+insert into PersonalData values(default, 'Dilshod', 'Sapaev', '11/08/1998','89951218352', 'Dilshod070@mail.ru', Null, 'MSU', Null, Null);
 insert into PersonalData values(default, 'Emma', 'Stone', '11/06/1988', Null , Null, Null, Null, Null, 'Hot');
 insert into PersonalData values(default, 'Ksenia', 'Kriger', '02/03/1999', Null , Null, Null, 'MSU', Null, Null);
-insert into PersonalData values(default, 'Runyshkin', 'Stanislav', '05/03/1999', Null, Null, Null, 'MSU', Null, Null);
+insert into PersonalData values(default, 'Stanislav', 'Runyshkin', '05/03/1999', Null, Null, Null, 'MSU', Null, Null);
 
 insert into Accounts values('admin', 'admin', 1);
 insert into Accounts values('Dilshod070', 'Password', 1);

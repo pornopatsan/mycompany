@@ -25,10 +25,12 @@ public class EmployeedepartmentDaoTest {
     @Test
     public void findById() {
         assertEquals("Board of Directors", _dao.findById(1).getDepartmentByDepartmentId().getName());
+        assertEquals("President", _dao.findById(1).getEmployeeByEmployeeId().getJobsByJobId().getFunction());
+        assertEquals("Dilshod", _dao.findById(1).getEmployeeByEmployeeId().getPersonaldataByPersonalId().getFirstName());
     }
 
     @Test
-    public void save_delete() {
+    public void saveDelete() {
         EmployeeDepartmentEntity tmp = new EmployeeDepartmentEntity();
         tmp.setId(-1);
         _dao.save(tmp);
@@ -40,6 +42,7 @@ public class EmployeedepartmentDaoTest {
     @Test
     public void findAll() {
         List<EmployeeDepartmentEntity> _list = _dao.findAll();
-        assertEquals("Board of Directors", _list.get(0).getDepartmentByDepartmentId().getName());
+        assertNotNull(_list);
     }
+
 }

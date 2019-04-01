@@ -45,6 +45,7 @@ public class AccountsDaoTest {
     @Test
     public void findAll() {
         List<AccountsEntity> _list = _dao.findAll();
+        assertNotNull(_list);
         boolean contains_admin = false;
         for (AccountsEntity i: _list) {
             if (i.getLogin().equals("admin")) {
@@ -54,4 +55,5 @@ public class AccountsDaoTest {
         }
         assertTrue(contains_admin);
     }
+
 }

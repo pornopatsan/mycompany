@@ -27,7 +27,7 @@ public class JobsDaoTest {
     }
 
     @Test
-    public void save_update_delete() {
+    public void saveUpdateDelete() {
         JobsEntity tmp = new JobsEntity();
         tmp.setId(-1);
         tmp.setFunction("TEST_ENTITY");
@@ -43,6 +43,9 @@ public class JobsDaoTest {
     @Test
     public void findAll() {
         List<JobsEntity> _list = _dao.findAll();
-        assertEquals("President", _list.get(0).getFunction());
+        for (JobsEntity i: _list) {
+            assertEquals(i.getFunction(), _dao.findById(i.getId()).getFunction());
+        }
     }
+
 }

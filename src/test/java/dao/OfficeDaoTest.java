@@ -29,7 +29,7 @@ public class OfficeDaoTest {
     }
 
     @Test
-    public void save_update_delete() {
+    public void saveUpdateDelete() {
         OfficeEntity tmp = new OfficeEntity();
         tmp.setId(-1);
         tmp.setAddress("TEST_ENTITY");
@@ -45,6 +45,20 @@ public class OfficeDaoTest {
     @Test
     public void findAll() {
         List<OfficeEntity> _list = _dao.findAll();
-        assertEquals("Lomonosovsky pr-ct 27/11", _list.get(0).getAddress());
+        for (OfficeEntity i: _list) {
+            assertEquals(i.getAddress(), _dao.findById(i.getId()).getAddress());
+        }
     }
+
+    @Test
+    public void updateDescription() {
+        OfficeEntity tmp = _dao.findById(1);
+        String prev = tmp.getDescription();
+        tmp.setDescription("DESCRIPTION");
+        _dao.update(tmp);
+        assertEquals("DESCRIPTION", _dao.findById(1).getDescription());
+        tmp.setDescription(prev);
+        _dao.update(tmp);
+    }
+
 }

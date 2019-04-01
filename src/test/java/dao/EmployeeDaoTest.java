@@ -51,8 +51,9 @@ public class EmployeeDaoTest {
     @Test
     public void findAll() {
         List<EmployeeEntity> _list = _dao.findAll();
-        assertEquals(_list.get(0).getSalary(), 10000.00, eps);
-        assertEquals(_list.get(1).getSalary(),3000.00, eps);
-        assertEquals(_list.get(2).getSalary(),800.00, eps);
+        for (EmployeeEntity i: _list) {
+            assertEquals(i.getSalary(), _dao.findById(i.getId()).getSalary(), eps);
+        }
     }
+
 }
