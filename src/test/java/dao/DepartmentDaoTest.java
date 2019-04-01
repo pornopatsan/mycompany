@@ -34,10 +34,12 @@ public class DepartmentDaoTest {
         tmp.setId(-1);
         tmp.setName("TEST_ENTITY");
         _dao.save(tmp);
-        assertEquals(_dao.findById(-1).getName(), "TEST_ENTITY");
+        assertEquals("TEST_ENTITY", _dao.findById(-1).getName());
         tmp.setName("NEW_TEST_ENTITY");
+//        tmp.setDescription("DESCRIPTION");
         _dao.update(tmp);
-        assertEquals(_dao.findById(-1).getName(), "NEW_TEST_ENTITY");
+        assertEquals("NEW_TEST_ENTITY", _dao.findById(-1).getName());
+//        assertEquals("DESCRIPTION", _dao.findById(-1).getDescription());
         _dao.delete(tmp);
         assertNull(_dao.findById(-1));
     }
@@ -45,10 +47,9 @@ public class DepartmentDaoTest {
     @Test
     public void findAll() {
         List<DepartmentEntity> _list = _dao.findAll();
-        assertEquals(_list.get(0).getName(), "Board of Directors");
-        assertEquals(_list.get(1).getName(), "Game Development");
-        assertEquals(_list.get(1).getDepartmentByHeadId().getName(), "Board of Directors");
-        assertEquals(_list.get(2).getName(), "HR");
+        for (DepartmentEntity i: _list) {
+            assertEquals(i.getName(), _dao.findById(i.getId()).getName());
+        }
     }
 
     @Test
@@ -57,6 +58,18 @@ public class DepartmentDaoTest {
         assertNull(head.getDepartmentByHeadId());
         DepartmentEntity other = _dao.findById(2);
         assertEquals(head, other.getDepartmentByHeadId());
+    }
+
+    @Test
+    public void updateDescription() {
+        DepartmentEntity tmp = _dao.findById(1);
+        assertEquals(1, tmp.getId().intValue());
+        String prev = tmp.getDescription();
+        tmp.setDescription("DESCRIPTION");
+        _dao.update(tmp);
+        assertEquals("DESCRIPTION", _dao.findById(1).getDescription());
+        tmp.setDescription(null);
+        _dao.update(tmp);
     }
 
 }

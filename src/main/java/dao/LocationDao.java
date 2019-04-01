@@ -9,8 +9,14 @@ import utils.HibernateSessionFactoryUtil;
 import java.util.List;
 
 public class LocationDao {
+
+    private Session session;
+
     public LocationEntity findById(int id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(LocationEntity.class, id);
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        LocationEntity res = session.get(LocationEntity.class, id);
+        session.close();
+        return res;
     }
 
     public void save(LocationEntity location) {
@@ -38,8 +44,9 @@ public class LocationDao {
     }
 
     public List<LocationEntity> findAll() {
-        List<LocationEntity> res = (List<LocationEntity>)
-                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From LocationEntity").list();
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        List<LocationEntity> res = (List<LocationEntity>) session.createQuery("From LocationEntity").list();
+        session.close();
         return res;
     }
 }

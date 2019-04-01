@@ -10,11 +10,17 @@ import java.util.List;
 
 public class DepartmentDao {
 
+    private Session session;
+
     public DepartmentEntity findById(int id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(DepartmentEntity.class, id);
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        DepartmentEntity res = session.get(DepartmentEntity.class, id);
+        session.close();
+        return res;
     }
 
     public void save(DepartmentEntity department) {
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
         session.save(department);
@@ -39,8 +45,9 @@ public class DepartmentDao {
     }
 
     public List<DepartmentEntity> findAll() {
-        List<DepartmentEntity> res = (List<DepartmentEntity>)
-                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From DepartmentEntity").list();
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        List<DepartmentEntity> res = (List<DepartmentEntity>) session.createQuery("From DepartmentEntity").list();
+        session.close();
         return res;
     }
 }

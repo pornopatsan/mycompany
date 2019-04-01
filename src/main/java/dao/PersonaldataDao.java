@@ -13,8 +13,13 @@ import java.util.List;
 
 public class PersonaldataDao {
 
+    private Session session;
+
     public PersonaldataEntity findById(int id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(PersonaldataEntity.class, id);
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        PersonaldataEntity res = session.get(PersonaldataEntity.class, id);
+        session.close();
+        return res;
     }
 
     public void save(PersonaldataEntity personaldata) {
@@ -42,8 +47,9 @@ public class PersonaldataDao {
     }
 
     public List<PersonaldataEntity> findAll() {
-        List<PersonaldataEntity> res = (List<PersonaldataEntity>)
-                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From PersonaldataEntity").list();
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        List<PersonaldataEntity> res = (List<PersonaldataEntity>) session.createQuery("From PersonaldataEntity").list();
+        session.close();
         return res;
     }
 

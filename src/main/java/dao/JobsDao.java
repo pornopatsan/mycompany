@@ -11,8 +11,14 @@ import utils.HibernateSessionFactoryUtil;
 import java.util.List;
 
 public class JobsDao {
+
+    private Session session;
+
     public JobsEntity findById(int id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(JobsEntity.class, id);
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        JobsEntity res = session.get(JobsEntity.class, id);
+        session.close();
+        return res;
     }
 
     public void save(JobsEntity job) {
@@ -41,8 +47,9 @@ public class JobsDao {
 
 
     public List<JobsEntity> findAll() {
-        List<JobsEntity> res = (List<JobsEntity>)
-                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From JobsEntity").list();
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        List<JobsEntity> res = (List<JobsEntity>) session.createQuery("From JobsEntity").list();
+        session.close();
         return res;
-    }
+}
 }

@@ -9,8 +9,14 @@ import utils.HibernateSessionFactoryUtil;
 import java.util.List;
 
 public class OfficeDao {
+
+    private Session session;
+
     public OfficeEntity findById(int id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(OfficeEntity.class, id);
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        OfficeEntity res = session.get(OfficeEntity.class, id);
+        session.close();
+        return res;
     }
 
     public void save(OfficeEntity office) {
@@ -38,8 +44,9 @@ public class OfficeDao {
     }
 
     public List<OfficeEntity> findAll() {
-        List<OfficeEntity> res = (List<OfficeEntity>)
-                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From OfficeEntity").list();
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        List<OfficeEntity> res = (List<OfficeEntity>) session.createQuery("From OfficeEntity").list();
+        session.close();
         return res;
     }
 }

@@ -10,8 +10,13 @@ import java.util.List;
 
 public class AccountsDao {
 
+    private Session session;
+
     public AccountsEntity findByLogin(String login) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(AccountsEntity.class, login);
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        AccountsEntity res = session.get(AccountsEntity.class, login);
+        session.close();
+        return res;
     }
 
     public void save(AccountsEntity account) {
@@ -39,8 +44,9 @@ public class AccountsDao {
     }
 
     public List<AccountsEntity> findAll() {
-        List<AccountsEntity> res = (List<AccountsEntity>)
-                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From AccountsEntity").list();
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        List<AccountsEntity> res = (List<AccountsEntity>) session.createQuery("From AccountsEntity").list();
+        session.close();
         return res;
     }
 }

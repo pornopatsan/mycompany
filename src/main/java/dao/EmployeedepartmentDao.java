@@ -8,8 +8,14 @@ import utils.HibernateSessionFactoryUtil;
 import java.util.List;
 
 public class EmployeedepartmentDao {
+
+    private Session session;
+
     public EmployeeDepartmentEntity findById(int id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(EmployeeDepartmentEntity.class, id);
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        EmployeeDepartmentEntity res = session.get(EmployeeDepartmentEntity.class, id);
+        session.close();
+        return res;
     }
 
     public void save(EmployeeDepartmentEntity tmp) {
@@ -37,8 +43,10 @@ public class EmployeedepartmentDao {
     }
 
     public List<EmployeeDepartmentEntity> findAll() {
-        List<EmployeeDepartmentEntity> res = (List<EmployeeDepartmentEntity>)
-                HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From EmployeeDepartmentEntity").list();
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        List<EmployeeDepartmentEntity> res =
+                (List<EmployeeDepartmentEntity>) session.createQuery("From EmployeeDepartmentEntity").list();
+        session.close();
         return res;
     }
 
