@@ -25,7 +25,6 @@ public class AccountsDaoTest {
     @Test
     public void findByLogin() {
         assertEquals(_dao.findByLogin("admin").getPasswordd(), "admin");
-        assertNull(_dao.findByLogin("ADMIN"));
     }
 
     @Test

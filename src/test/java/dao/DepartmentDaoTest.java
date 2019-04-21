@@ -24,7 +24,7 @@ public class DepartmentDaoTest {
 
     @Test
     public void findById() {
-        assertEquals(_dao.findById(1).getName(), "Board of Directors");
+        assertEquals("Board of Directors", _dao.findById(1).getName());
         assertNull(_dao.findById(-1));
     }
 

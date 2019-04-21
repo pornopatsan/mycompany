@@ -30,10 +30,12 @@ public class EmployeedepartmentDaoTest {
     }
 
     @Test
-    public void saveDelete() {
+    public void saveUpdateDelete() {
         EmployeeDepartmentEntity tmp = new EmployeeDepartmentEntity();
         tmp.setId(-1);
         _dao.save(tmp);
+        assertNotNull(_dao.findById(-1));
+        _dao.update(tmp);
         assertNotNull(_dao.findById(-1));
         _dao.delete(tmp);
         assertNull(_dao.findById(-1));
