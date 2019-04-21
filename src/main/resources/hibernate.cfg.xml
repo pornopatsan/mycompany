@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Configuration DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-    <session-factory>
+    <session-factory name="hgit ibernate.cfg.xml">
         <property name="connection.url">jdbc:postgresql://localhost:5432/pracbackend</property>
         <property name="connection.driver_class">org.postgresql.Driver</property>
         <mapping class="hibernate.AccountsEntity"/>
