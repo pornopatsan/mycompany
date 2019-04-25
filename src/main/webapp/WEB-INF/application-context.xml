@@ -46,6 +46,10 @@
         </property>
     </bean>
 
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
     <bean id="accountsDao" class="company.dao.AccountsDao"/>
     <bean id="departmentDao" class="company.dao.DepartmentDao"/>
     <bean id="employeeDao" class="company.dao.EmployeeDao"/>

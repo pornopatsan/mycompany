@@ -1,5 +1,6 @@
 package company.hibernate;
 
+import javax.annotation.Generated;
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.List;
@@ -21,6 +22,7 @@ public class PersonaldataEntity {
     private List<EmployeeEntity> employeesById;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public Integer getId() {
         return id;

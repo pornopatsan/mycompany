@@ -37,15 +37,14 @@ public class EmployeeDaoTest {
     @Test
     public void saveUpdateDelete() {
         EmployeeEntity tmp = new EmployeeEntity();
-        tmp.setId(-1);
         tmp.setSalary(-1.00);
         _dao.save(tmp);
-        assertEquals(_dao.findById(-1).getSalary(), -1.00, eps);
+        assertEquals(_dao.findById(tmp.getId()).getSalary(), -1.00, eps);
         tmp.setSalary(-2.00);
         _dao.update(tmp);
-        assertEquals(_dao.findById(-1).getSalary(), -2.00, eps);
+        assertEquals(_dao.findById(tmp.getId()).getSalary(), -2.00, eps);
         _dao.delete(tmp);
-        assertNull(_dao.findById(-1));
+        assertNull(_dao.findById(tmp.getId()));
     }
 
     @Test

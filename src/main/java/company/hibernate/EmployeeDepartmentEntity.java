@@ -10,6 +10,7 @@ public class EmployeeDepartmentEntity {
     private DepartmentEntity departmentByDepartmentId;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public Integer getId() {
         return id;

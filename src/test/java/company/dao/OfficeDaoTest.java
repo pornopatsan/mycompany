@@ -31,15 +31,14 @@ public class OfficeDaoTest {
     @Test
     public void saveUpdateDelete() {
         OfficeEntity tmp = new OfficeEntity();
-        tmp.setId(-1);
         tmp.setAddress("TEST_ENTITY");
         _dao.save(tmp);
-        assertEquals("TEST_ENTITY", _dao.findById(-1).getAddress());
+        assertEquals("TEST_ENTITY", _dao.findById(tmp.getId()).getAddress());
         tmp.setAddress("NEW_TEST_ENTITY");
         _dao.update(tmp);
-        assertEquals("NEW_TEST_ENTITY", _dao.findById(-1).getAddress());
+        assertEquals("NEW_TEST_ENTITY", _dao.findById(tmp.getId()).getAddress());
         _dao.delete(tmp);
-        assertNull(_dao.findById(-1));
+        assertNull(_dao.findById(tmp.getId()));
     }
 
     @Test

@@ -31,15 +31,14 @@ public class DepartmentDaoTest {
     @Test
     public void saveUpdateDelete() {
         DepartmentEntity tmp = new DepartmentEntity();
-        tmp.setId(-1);
         tmp.setName("TEST_ENTITY");
         _dao.save(tmp);
-        assertEquals("TEST_ENTITY", _dao.findById(-1).getName());
+        assertEquals("TEST_ENTITY", _dao.findById(tmp.getId()).getName());
         tmp.setName("NEW_TEST_ENTITY");
         _dao.update(tmp);
-        assertEquals("NEW_TEST_ENTITY", _dao.findById(-1).getName());
+        assertEquals("NEW_TEST_ENTITY", _dao.findById(tmp.getId()).getName());
         _dao.delete(tmp);
-        assertNull(_dao.findById(-1));
+        assertNull(_dao.findById(tmp.getId()));
     }
 
     @Test

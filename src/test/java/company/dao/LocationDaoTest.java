@@ -32,15 +32,14 @@ public class LocationDaoTest {
     @Test
     public void saveUpdateDelete() {
         LocationEntity tmp = new LocationEntity();
-        tmp.setId(-1);
         tmp.setRegion("TEST_ENTITY");
         _dao.save(tmp);
-        assertEquals("TEST_ENTITY", _dao.findById(-1).getRegion());
+        assertEquals("TEST_ENTITY", _dao.findById(tmp.getId()).getRegion());
         tmp.setRegion("NEW_TEST_ENTITY");
         _dao.update(tmp);
-        assertEquals("NEW_TEST_ENTITY", _dao.findById(-1).getRegion());
+        assertEquals("NEW_TEST_ENTITY", _dao.findById(tmp.getId()).getRegion());
         _dao.delete(tmp);
-        assertNull(_dao.findById(-1));
+        assertNull(_dao.findById(tmp.getId()));
     }
 
     @Test

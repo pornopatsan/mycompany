@@ -29,15 +29,14 @@ public class JobsDaoTest {
     @Test
     public void saveUpdateDelete() {
         JobsEntity tmp = new JobsEntity();
-        tmp.setId(-1);
         tmp.setFunction("TEST_ENTITY");
         _dao.save(tmp);
-        assertEquals("TEST_ENTITY", _dao.findById(-1).getFunction());
+        assertEquals("TEST_ENTITY", _dao.findById(tmp.getId()).getFunction());
         tmp.setFunction("NEW_TEST_ENTITY");
         _dao.update(tmp);
-        assertEquals("NEW_TEST_ENTITY", _dao.findById(-1).getFunction());
+        assertEquals("NEW_TEST_ENTITY", _dao.findById(tmp.getId()).getFunction());
         _dao.delete(tmp);
-        assertNull(_dao.findById(-1));
+        assertNull(_dao.findById(tmp.getId()));
     }
 
     @Test

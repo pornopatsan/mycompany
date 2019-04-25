@@ -31,15 +31,14 @@ public class EmployeejobshistoryDaoTest {
     @Test
     public void saveUpdateDelete() {
         EmployeejobsHistoryEntity tmp = new EmployeejobsHistoryEntity();
-        tmp.setId(-1);
         tmp.setSalary(-1.00);
         _dao.save(tmp);
-        assertEquals(-1.00, _dao.findById(-1).getSalary(), eps);
+        assertEquals(-1.00, _dao.findById(tmp.getId()).getSalary(), eps);
         tmp.setSalary(-2.00);
         _dao.update(tmp);
-        assertEquals(-2.00, _dao.findById(-1).getSalary(), eps);
+        assertEquals(-2.00, _dao.findById(tmp.getId()).getSalary(), eps);
         _dao.delete(tmp);
-        assertNull(_dao.findById(-1));
+        assertNull(_dao.findById(tmp.getId()));
     }
 
     @Test

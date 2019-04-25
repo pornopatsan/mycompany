@@ -15,8 +15,7 @@
     <table>
         <tr><th>Данные Сотрудника</th><th></th></tr>
         <tr><td>Id Работника</td><td><c:out value="${employee.id}"/></td></tr>
-        <tr><td>Должность</td><td><c:out value="${job.function}"/></td></tr>
-        <tr><td>Должность ??</td><td><c:out value="${employee.jobsByJobId.function}"/></td></tr>
+        <tr><td>Должность</td><td><c:out value="${employee.jobsByJobId.function}"/></td></tr>
         <tr><td>Зарплата</td><td><c:out value="${employee.salary}"/></td></tr>
         <tr><td>Работает с</td><td><c:out value="${employee.hireDate}"/></td></tr>
     </table>
@@ -37,16 +36,16 @@
 </div>
 
 <div>
-    <h6>История Должностей:</h6>
+    <h3>История Должностей:</h3>
     <table>
         <tr><th>Должность</th><th>Дата Назначения</th><th>Дата Снятия</th></tr>
-        <c:forEach items="${jobsHistory}" var="item">
-            <tr>
+        <%--<c:forEach items="${jobsHistory}" var="item">--%>
+            <%--<tr>--%>
                 <%--<td><c:out value="${item.jobsByJobId.function}"/></td>--%>
                 <%--<td><c:out value="${item.appointment}"/></td>--%>
                 <%--<td><c:out value="${item.removal}"/></td>--%>
-            </tr>
-        </c:forEach>
+            <%--</tr>--%>
+        <%--</c:forEach>--%>
     </table>
 </div>
 
