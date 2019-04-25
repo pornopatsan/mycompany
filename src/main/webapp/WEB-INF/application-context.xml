@@ -16,29 +16,46 @@
     <context:component-scan base-package="company "/>
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://localhost:5432/bank"/>
-        <property name="username" value="dilshod070"/>
-        <property name="password" value="Qazwsx070"/>
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
     </bean>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="hibernateProperties">
             <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</prop>
-                <prop key="hibernate.show_sql">true</prop>
-                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.dialect">${company.hibernate.dialect}</prop>
+                <prop key="hibernate.show_sql">${company.hibernate.show_sql}</prop>
+                <prop key="hibernate.hbm2ddl.auto">${company.hibernate.hbm2ddl.auto}</prop>
             </props>
         </property>
         <property name="annotatedClasses">
             <list>
+                <value>company.hibernate.AccountsEntity</value>
+                <value>company.hibernate.DepartmentEntity</value>
+                <value>company.hibernate.EmployeeEntity</value>
+                <value>company.hibernate.EmployeejobsHistoryEntity</value>
+                <value>company.hibernate.JobsEntity</value>
+                <value>company.hibernate.LocationEntity</value>
+                <value>company.hibernate.OfficeEntity</value>
                 <value>company.hibernate.PersonaldataEntity</value>
+                <value>company.hibernate.EmployeeDepartmentEntity</value>
             </list>
         </property>
     </bean>
 
-    <bean id="ideasDAO" class="company.dao.PersonaldataDao"/>
-    <bean id="ideasService" class="company.service.PersonaldataService"/>
+    <bean id="accountsDao" class="company.dao.AccountsDao"/>
+    <bean id="departmentDao" class="company.dao.DepartmentDao"/>
+    <bean id="employeeDao" class="company.dao.EmployeeDao"/>
+    <bean id="employeejobshistoryDao" class="company.dao.EmployeejobshistoryDao"/>
+    <bean id="jobsDao" class="company.dao.JobsDao"/>
+    <bean id="locationDao" class="company.dao.LocationDao"/>
+    <bean id="officeDao" class="company.dao.OfficeDao"/>
+    <bean id="personaldataDao" class="company.dao.PersonaldataDao"/>
+    <bean id="employeedepartmentDao" class="company.dao.EmployeedepartmentDao"/>
 
+    <bean id="employeeService" class="company.service.EmployeeService"/>
+    <bean id="personaldataService" class="company.service.PersonaldataService"/>
 </beans>

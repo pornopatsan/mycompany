@@ -17,8 +17,8 @@ public class PersonaldataEntity {
     private String education;
     private String photo;
     private String selfDescription;
-//    private List<AccountsEntity> accountsById;
-//    private List<EmployeeEntity> employeesById;
+    private List<AccountsEntity> accountsById;
+    private List<EmployeeEntity> employeesById;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -157,21 +157,21 @@ public class PersonaldataEntity {
         return result;
     }
 
-//    @OneToMany(mappedBy = "personaldataByPersonalId")
-//    public List<AccountsEntity> getAccountsById() {
-//        return accountsById;
-//    }
-//
-//    public void setAccountsById(List<AccountsEntity> accountsById) {
-//        this.accountsById = accountsById;
-//    }
-//
-//    @OneToMany(mappedBy = "personaldataByPersonalId")
-//    public List<EmployeeEntity> getEmployeesById() {
-//        return employeesById;
-//    }
-//
-//    public void setEmployeesById(List<EmployeeEntity> employeesById) {
-//        this.employeesById = employeesById;
-//    }
+    @OneToMany(mappedBy = "personaldataByPersonalId")
+    public List<AccountsEntity> getAccountsById() {
+        return accountsById;
+    }
+
+    public void setAccountsById(List<AccountsEntity> accountsById) {
+        this.accountsById = accountsById;
+    }
+
+    @OneToMany(mappedBy = "personaldataByPersonalId")
+    public List<EmployeeEntity> getEmployeesById() {
+        return employeesById;
+    }
+
+    public void setEmployeesById(List<EmployeeEntity> employeesById) {
+        this.employeesById = employeesById;
+    }
 }

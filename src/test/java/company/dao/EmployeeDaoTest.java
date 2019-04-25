@@ -1,6 +1,7 @@
 package company.dao;
 
 import company.hibernate.EmployeeEntity;
+import company.hibernate.EmployeejobsHistoryEntity;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -53,6 +54,13 @@ public class EmployeeDaoTest {
         for (EmployeeEntity i: _list) {
             assertEquals(i.getSalary(), _dao.findById(i.getId()).getSalary(), eps);
         }
+    }
+
+    @Test
+    public void getJobHistory() {
+        EmployeeEntity tmp = _dao.findById(1);
+        List<EmployeejobsHistoryEntity> jobs = tmp.getEmployeejobsHistoriesById();
+        assertNotNull(jobs);
     }
 
 }
