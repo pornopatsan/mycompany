@@ -24,11 +24,10 @@ public class ProfileController {
         EmployeeEntity res = service.findById(1);
         map.addAttribute("employee", res);
         map.addAttribute("personaldata", res.getPersonaldataByPersonalId());
-        map.addAttribute("job", res.getJobsByJobId());
 
-        Hibernate.initialize(res.getEmployeejobsHistoriesById());
-        List<EmployeejobsHistoryEntity> jh = res.getEmployeejobsHistoriesById();
-        map.addAttribute("jobsHistory", jh);
+//        Hibernate.initialize(res.getEmployeejobsHistoriesById());
+//        List<EmployeejobsHistoryEntity> jh = res.getEmployeejobsHistoriesById();
+//        map.addAttribute("jobsHistory", jh);
         return "profile";
     }
 }
