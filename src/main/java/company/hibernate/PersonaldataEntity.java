@@ -159,7 +159,7 @@ public class PersonaldataEntity {
         return result;
     }
 
-    @OneToMany(mappedBy = "personaldataByPersonalId")
+    @OneToMany(mappedBy = "personaldataByPersonalId", fetch = FetchType.EAGER)
     public List<AccountsEntity> getAccountsById() {
         return accountsById;
     }
@@ -168,7 +168,7 @@ public class PersonaldataEntity {
         this.accountsById = accountsById;
     }
 
-    @OneToMany(mappedBy = "personaldataByPersonalId")
+    @OneToMany(mappedBy = "personaldataByPersonalId", fetch = FetchType.EAGER)
     public List<EmployeeEntity> getEmployeesById() {
         return employeesById;
     }

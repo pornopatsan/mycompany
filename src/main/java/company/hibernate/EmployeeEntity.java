@@ -86,7 +86,7 @@ public class EmployeeEntity {
         this.jobsByJobId = jobsByJobId;
     }
 
-    @OneToMany(mappedBy = "employeeByEmployeeId")
+    @OneToMany(mappedBy = "employeeByEmployeeId", fetch = FetchType.EAGER)
     public List<EmployeeDepartmentEntity> getEmployeeDepartmentsById() {
         return employeeDepartmentsById;
     }
@@ -95,7 +95,7 @@ public class EmployeeEntity {
         this.employeeDepartmentsById = employeeDepartmentsById;
     }
 
-    @OneToMany(mappedBy = "employeeByEmployeeId")
+    @OneToMany(mappedBy = "employeeByEmployeeId", fetch = FetchType.EAGER)
     public List<EmployeejobsHistoryEntity> getEmployeejobsHistoriesById() {
         return employeejobsHistoriesById;
     }

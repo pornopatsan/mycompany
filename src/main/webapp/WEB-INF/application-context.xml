@@ -61,6 +61,8 @@
     <bean id="personaldataDao" class="company.dao.PersonaldataDao"/>
     <bean id="employeedepartmentDao" class="company.dao.EmployeedepartmentDao"/>
 
+    <bean id="departmentService" class="company.service.DepartmentService"/>
     <bean id="employeeService" class="company.service.EmployeeService"/>
+    <bean id="officeService" class="company.service.OfficeService"/>
     <bean id="personaldataService" class="company.service.PersonaldataService"/>
 </beans>

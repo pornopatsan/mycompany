@@ -7,6 +7,7 @@
     <meta http-equiv="content-type" content="text/html" charset="UTF-8">
 </head>
 <body>
+<h3><a href="main">Отмена</a></h3>
 <form:form id="formCreate" modelAttribute="newPersonaldata" method="post" action="registersubmit">
     ИМЯ:
     <form:input path="firstName"/><br>

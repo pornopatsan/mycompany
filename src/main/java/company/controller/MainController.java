@@ -1,6 +1,8 @@
 package company.controller;
 
 import company.hibernate.PersonaldataEntity;
+import company.service.EmployeeService;
+import company.service.OfficeService;
 import company.service.PersonaldataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,19 +18,26 @@ import java.util.List;
 public class MainController {
 
     @Autowired
-    PersonaldataService service;
+    PersonaldataService personaldataService;
+
+    @Autowired
+    OfficeService officeService;
+
+    @Autowired
+    EmployeeService employeeService;
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String mainPage(ModelMap map) {
-        List<PersonaldataEntity> list = service.findAll();
-        map.addAttribute("list", list);
+        map.addAttribute("persons", personaldataService.findAll());
+        map.addAttribute("employee", employeeService.findAll());
+        map.addAttribute("offices", officeService.findAll());
         return "index";
     }
 
-    @RequestMapping(value = "/main", method = RequestMethod.POST)
-    public ModelAndView registerRedirect(ModelMap map) {
-        return new ModelAndView("redirect:register");
-    }
+//    @RequestMapping(value = "/main", method = RequestMethod.POST)
+//    public ModelAndView registerRedirect(ModelMap map) {
+//        return new ModelAndView("redirect:register");
+//    }
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public ModelAndView registerFormShow() {
@@ -46,7 +55,7 @@ public class MainController {
             if (newPersonaldataEntity.getLastName().length() < 1) {
                 throw new Exception();
             }
-            service.save(newPersonaldataEntity);
+            personaldataService.save(newPersonaldataEntity);
             return new ModelAndView("redirect:main");
         } catch (Exception ex) {
             return new ModelAndView("redirect:register");

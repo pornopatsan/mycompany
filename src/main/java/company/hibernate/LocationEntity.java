@@ -64,7 +64,7 @@ public class LocationEntity {
         return result;
     }
 
-    @OneToMany(mappedBy = "locationByLocationId")
+    @OneToMany(mappedBy = "locationByLocationId", fetch = FetchType.EAGER)
     public List<OfficeEntity> getOfficesById() {
         return officesById;
     }
