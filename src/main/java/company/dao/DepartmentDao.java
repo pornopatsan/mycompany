@@ -5,42 +5,45 @@ import company.hibernate.DepartmentEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import company.utils.HibernateSessionFactoryUtil;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@EnableTransactionManagement
+@Transactional
 public class DepartmentDao {
 
     private Session session;
 
     public DepartmentEntity findById(int id) {
         session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        DepartmentEntity res = session.get(DepartmentEntity.class, id);
+        DepartmentEntity res = (DepartmentEntity) session.get(DepartmentEntity.class, id);
         session.close();
         return res;
     }
 
+    @Transactional
     public void save(DepartmentEntity department) {
         session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
         session.save(department);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 
+    @Transactional
     public void delete(DepartmentEntity department) {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         session.delete(department);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 
+    @Transactional
     public void update(DepartmentEntity department) {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
+        session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         session.update(department);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 

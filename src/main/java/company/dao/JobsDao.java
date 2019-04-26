@@ -5,41 +5,45 @@ import company.hibernate.JobsEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import company.utils.HibernateSessionFactoryUtil;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@EnableTransactionManagement
+@Transactional
 public class JobsDao {
 
     private Session session;
 
     public JobsEntity findById(int id) {
         session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        JobsEntity res = session.get(JobsEntity.class, id);
+        JobsEntity res = (JobsEntity) session.get(JobsEntity.class, id);
         session.close();
         return res;
     }
 
+    @Transactional
     public void save(JobsEntity job) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
         session.save(job);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 
+    @Transactional
     public void delete(JobsEntity job) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
         session.delete(job);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 
+    @Transactional
     public void update(JobsEntity job) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
         session.update(job);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 

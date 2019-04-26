@@ -5,41 +5,45 @@ import company.hibernate.AccountsEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import company.utils.HibernateSessionFactoryUtil;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@EnableTransactionManagement
+@Transactional
 public class AccountsDao {
 
     private Session session;
 
     public AccountsEntity findByLogin(String login) {
         session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        AccountsEntity res = session.get(AccountsEntity.class, login);
+        AccountsEntity res = (AccountsEntity) session.get(AccountsEntity.class, login);
         session.close();
         return res;
     }
 
+    @Transactional
     public void save(AccountsEntity account) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
         session.save(account);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 
+    @Transactional
     public void delete(AccountsEntity account) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
         session.delete(account);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 
+    @Transactional
     public void update(AccountsEntity account) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
         session.update(account);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 

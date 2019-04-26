@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class ProfileController {
     @Autowired
     EmployeeService service;
 
-    @RequestMapping(value = "/profile")
+    @RequestMapping(value = "/profile",  method = RequestMethod.GET)
     public String profilePage(ModelMap map) {
         EmployeeEntity res = service.findById(1);
         map.addAttribute("employee", res);

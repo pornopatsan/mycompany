@@ -5,41 +5,45 @@ import company.hibernate.EmployeejobsHistoryEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import company.utils.HibernateSessionFactoryUtil;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@EnableTransactionManagement
+@Transactional
 public class EmployeejobshistoryDao {
 
     private Session session;
 
     public EmployeejobsHistoryEntity findById(int id) {
         session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        EmployeejobsHistoryEntity res = session.get(EmployeejobsHistoryEntity.class, id);
+        EmployeejobsHistoryEntity res = (EmployeejobsHistoryEntity) session.get(EmployeejobsHistoryEntity.class, id);
         session.close();
         return res;
     }
 
+    @Transactional
     public void save(EmployeejobsHistoryEntity history) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
         session.save(history);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 
+    @Transactional
     public void delete(EmployeejobsHistoryEntity history) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
         session.delete(history);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 
+    @Transactional
     public void update(EmployeejobsHistoryEntity history) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx1 = session.beginTransaction();
         session.update(history);
-        tx1.commit();
+        session.flush();
         session.close();
     }
 

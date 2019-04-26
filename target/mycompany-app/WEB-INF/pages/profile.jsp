@@ -22,7 +22,7 @@
 </div>
 
 <div>
-    <table>
+    <table border="1px">
         <tr><th>Персональные Данные</th><th></th></tr>
         <tr><td>Имя</td><td><c:out value="${personaldata.firstName}"/></td></tr>
         <tr><td>Фамилия</td><td><c:out value="${personaldata.lastName}"/></td></tr>
@@ -37,15 +37,15 @@
 
 <div>
     <h3>История Должностей:</h3>
-    <table>
+    <table border="2px">
         <tr><th>Должность</th><th>Дата Назначения</th><th>Дата Снятия</th></tr>
-        <%--<c:forEach items="${jobsHistory}" var="item">--%>
-            <%--<tr>--%>
-                <%--<td><c:out value="${item.jobsByJobId.function}"/></td>--%>
-                <%--<td><c:out value="${item.appointment}"/></td>--%>
-                <%--<td><c:out value="${item.removal}"/></td>--%>
-            <%--</tr>--%>
-        <%--</c:forEach>--%>
+        <c:forEach items="${jobsHistory}" var="item">
+            <tr>
+                <td><c:out value="${item.jobsByJobId.function}"/></td>
+                <td><c:out value="${item.appointment}"/></td>
+                <td><c:out value="${item.removal}"/></td>
+            </tr>
+        </c:forEach>
     </table>
 </div>
 
