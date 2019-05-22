@@ -15,6 +15,9 @@ public class EmployeeEntity {
     private List<EmployeeDepartmentEntity> employeeDepartmentsById;
     private List<EmployeejobsHistoryEntity> employeejobsHistoriesById;
 
+    private Integer tmpPersonalId;
+    private Integer tmpJobId;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -103,4 +106,21 @@ public class EmployeeEntity {
     public void setEmployeejobsHistoriesById(List<EmployeejobsHistoryEntity> employeejobsHistoriesById) {
         this.employeejobsHistoriesById = employeejobsHistoriesById;
     }
+
+    @Basic
+    public Integer getTmpPersonalId() {
+        return tmpPersonalId;
+    }
+    public void setTmpPersonalId(Integer id) {
+        this.tmpPersonalId = id;
+    }
+
+    @Basic
+    public Integer getTmpJobId() {
+        return tmpJobId;
+    }
+    public void setTmpJobId(Integer id) {
+        this.tmpJobId = id;
+    }
+
 }

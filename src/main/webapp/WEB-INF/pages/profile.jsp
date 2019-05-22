@@ -14,7 +14,7 @@
 <table>
     <tr>
         <th>Данные Сотрудника</th>
-        <th></th>
+        <th><a href="${pageContext.request.contextPath}/company/employee_promote_form?id=${employee.id}">Повысить</a></th>
     </tr>
     <tr>
         <td>Id Работника</td>
@@ -37,7 +37,7 @@
 <table border="1" width="50%">
     <tr>
         <th>Персональные Данные</th>
-        <th></th>
+        <th><a href="${pageContext.request.contextPath}/company/profile_update_form?id=${personaldata.id}">Изменить</a></th>
     </tr>
     <tr>
         <td>Имя</td>
@@ -85,12 +85,14 @@
         <th>Должность</th>
         <th>Дата Назначения</th>
         <th>Дата Снятия</th>
+        <th>Зарплата</th>
     </tr>
     <c:forEach items="${jobsHistory}" var="item">
         <tr>
             <td><c:out value="${item.jobsByJobId.function}"/></td>
             <td><c:out value="${item.appointment}"/></td>
             <td><c:out value="${item.removal}"/></td>
+            <td><c:out value="${item.salary}"/></td>
         </tr>
     </c:forEach>
 </table>

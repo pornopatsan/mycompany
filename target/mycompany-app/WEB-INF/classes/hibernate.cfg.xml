@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="hgit ibernate.cfg.xml">
+        <property name="connection.url">jdbc:postgresql://localhost:5432/pracbackend</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <mapping class="company.hibernate.AccountsEntity"/>
+        <mapping class="company.hibernate.DepartmentEntity"/>
+        <mapping class="company.hibernate.EmployeeEntity"/>
+        <mapping class="company.hibernate.EmployeejobsHistoryEntity"/>
+        <mapping class="company.hibernate.JobsEntity"/>
+        <mapping class="company.hibernate.LocationEntity"/>
+        <mapping class="company.hibernate.OfficeEntity"/>
+        <mapping class="company.hibernate.PersonaldataEntity"/>
+        <mapping class="company.hibernate.EmployeeDepartmentEntity"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

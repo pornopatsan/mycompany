@@ -46,11 +46,6 @@
         </property>
     </bean>
 
-    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    <tx:annotation-driven/>
-
     <bean id="accountsDao" class="company.dao.AccountsDao"/>
     <bean id="departmentDao" class="company.dao.DepartmentDao"/>
     <bean id="employeeDao" class="company.dao.EmployeeDao"/>
@@ -62,7 +57,9 @@
     <bean id="employeedepartmentDao" class="company.dao.EmployeedepartmentDao"/>
 
     <bean id="departmentService" class="company.service.DepartmentService"/>
+    <bean id="employeeJobsHistoryService" class="company.service.EmployeeJobsHistoryService"/>
     <bean id="employeeService" class="company.service.EmployeeService"/>
+    <bean id="jobService" class="company.service.JobService"/>
     <bean id="officeService" class="company.service.OfficeService"/>
     <bean id="personaldataService" class="company.service.PersonaldataService"/>
 </beans>
