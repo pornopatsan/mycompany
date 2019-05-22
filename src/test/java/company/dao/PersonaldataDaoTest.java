@@ -24,7 +24,7 @@ public class PersonaldataDaoTest {
 
     @Test
     public void findById() {
-        assertEquals("Dilshod", _dao.findById(1).getFirstName());
+        assertNotNull(_dao.findById(1));
         assertNull(_dao.findById(-1));
     }
 

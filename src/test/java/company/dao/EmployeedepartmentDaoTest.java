@@ -26,7 +26,7 @@ public class EmployeedepartmentDaoTest {
     public void findById() {
         assertEquals("Board of Directors", _dao.findById(1).getDepartmentByDepartmentId().getName());
         assertEquals("President", _dao.findById(1).getEmployeeByEmployeeId().getJobsByJobId().getFunction());
-        assertEquals("Dilshod", _dao.findById(1).getEmployeeByEmployeeId().getPersonaldataByPersonalId().getFirstName());
+        assertNotNull(_dao.findById(1).getEmployeeByEmployeeId().getPersonaldataByPersonalId());
     }
 
     @Test

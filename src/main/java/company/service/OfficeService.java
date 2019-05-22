@@ -16,17 +16,14 @@ public class OfficeService {
         return dao.findById(id);
     }
 
-    @Transactional
     public void save(OfficeEntity office) {
         dao.save(office);
     }
 
-    @Transactional
     public void delete(OfficeEntity office) {
         dao.delete(office);
     }
 
-    @Transactional
     public void update(OfficeEntity office) {
         dao.update(office);
     }

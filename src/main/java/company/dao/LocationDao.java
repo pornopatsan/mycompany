@@ -5,13 +5,9 @@ import company.hibernate.LocationEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import company.utils.HibernateSessionFactoryUtil;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@EnableTransactionManagement
-@Transactional
 public class LocationDao {
 
     private Session session;
@@ -23,27 +19,30 @@ public class LocationDao {
         return res;
     }
 
-    @Transactional
     public void save(LocationEntity location) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.save(location);
         session.flush();
+        tx1.commit();
         session.close();
     }
 
-    @Transactional
     public void delete(LocationEntity location) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.delete(location);
         session.flush();
+        tx1.commit();
         session.close();
     }
 
-    @Transactional
     public void update(LocationEntity location) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.update(location);
         session.flush();
+        tx1.commit();
         session.close();
     }
 

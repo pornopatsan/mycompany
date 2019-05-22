@@ -4,13 +4,9 @@ import company.hibernate.EmployeeDepartmentEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import company.utils.HibernateSessionFactoryUtil;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@EnableTransactionManagement
-@Transactional
 public class EmployeedepartmentDao {
 
     private Session session;
@@ -22,27 +18,30 @@ public class EmployeedepartmentDao {
         return res;
     }
 
-    @Transactional
     public void save(EmployeeDepartmentEntity tmp) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.save(tmp);
         session.flush();
+        tx1.commit();
         session.close();
     }
 
-    @Transactional
     public void delete(EmployeeDepartmentEntity tmp) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.delete(tmp);
         session.flush();
+        tx1.commit();
         session.close();
     }
 
-    @Transactional
     public void update(EmployeeDepartmentEntity tmp) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.update(tmp);
         session.flush();
+        tx1.commit();
         session.close();
     }
 

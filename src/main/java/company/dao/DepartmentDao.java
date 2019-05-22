@@ -5,13 +5,11 @@ import company.hibernate.DepartmentEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import company.utils.HibernateSessionFactoryUtil;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.List;
 
-@EnableTransactionManagement
-@Transactional
+
 public class DepartmentDao {
 
     private Session session;
@@ -23,25 +21,25 @@ public class DepartmentDao {
         return res;
     }
 
-    @Transactional
     public void save(DepartmentEntity department) {
         session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.save(department);
         session.flush();
         session.close();
     }
 
-    @Transactional
     public void delete(DepartmentEntity department) {
         session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.delete(department);
         session.flush();
         session.close();
     }
 
-    @Transactional
     public void update(DepartmentEntity department) {
         session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.update(department);
         session.flush();
         session.close();

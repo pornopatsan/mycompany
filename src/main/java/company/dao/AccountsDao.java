@@ -5,13 +5,10 @@ import company.hibernate.AccountsEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import company.utils.HibernateSessionFactoryUtil;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@EnableTransactionManagement
-@Transactional
+
 public class AccountsDao {
 
     private Session session;
@@ -23,25 +20,25 @@ public class AccountsDao {
         return res;
     }
 
-    @Transactional
     public void save(AccountsEntity account) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.save(account);
         session.flush();
         session.close();
     }
 
-    @Transactional
     public void delete(AccountsEntity account) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.delete(account);
         session.flush();
         session.close();
     }
 
-    @Transactional
     public void update(AccountsEntity account) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
         session.update(account);
         session.flush();
         session.close();
