@@ -3,6 +3,7 @@ package company.hibernate;
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "employee", schema = "public", catalog = "pracbackend")
@@ -54,17 +55,11 @@ public class EmployeeEntity {
 
         EmployeeEntity that = (EmployeeEntity) o;
 
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (salary - that.salary > 0.0001) return false;
-        if (hireDate != null ? !hireDate.equals(that.hireDate) : that.hireDate != null) return false;
-
-        return true;
+        return Objects.equals(id, that.id);
     }
 
     public int hashCode(double salary) {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (hireDate != null ? hireDate.hashCode() : 0);
-        return result;
+        return id != null ? id.hashCode() : 0;
     }
 
     @ManyToOne(cascade = CascadeType.ALL)

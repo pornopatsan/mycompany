@@ -72,7 +72,7 @@ public class EmployeedepartmentDao {
         Query query = session.createQuery(
                 "From EmployeeDepartmentEntity Where department_id = :department"
         );
-        query.setParameter("employee", department.getId());
+        query.setParameter("department", department.getId());
         List<EmployeeDepartmentEntity> res = (List<EmployeeDepartmentEntity>) query.list();
         session.close();
         return res;

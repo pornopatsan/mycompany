@@ -5,11 +5,10 @@
 <html>
 <body>
 <h2> (DEMO) Пользователи </h2>
-<%--<h3><a href="register.jsp">Зарегистрироваться</a></h3>--%>
 <a href="${pageContext.request.contextPath}/company/new_employee_form">Новвый Работник</a><br>
 <a href="${pageContext.request.contextPath}/company/search">Искать работников</a><br>
 
-<table width="100%">
+<table width="60%">
     <tr>
         <th>Наши Оффисы</th>
     </tr>
@@ -34,60 +33,60 @@
         </th>
     </tr>
 </table>
-<table width="100%">
+
+<table width="60%">
     <tr>
-        <th>Наши Сотрудники</th>
+        <th>Наши Отделения</th>
     </tr>
     <tr>
         <th>
-            <table width="100%" border="1" cellpadding="4" cellspacing="1" valign="top">
+            <table width="100%" border="1" cellpadding="4" valign="top">
                 <tr>
-                    <th>Id</th>
-                    <th>Имя</th>
-                    <th>Фамилия</th>
-                    <th>Должность</th>
-                    <th></th>
+                    <th>Название</th>
+                    <th>Офис</th>
+                    <th>Описание</th>
                 </tr>
-                <c:forEach items="${employee}" var="item">
+                <c:forEach items="${departments}" var="item">
                     <tr>
-                        <td><c:out value="${item.id}"/></td>
-                        <td><c:out value="${item.personaldataByPersonalId.firstName}"/></td>
-                        <td><c:out value="${item.personaldataByPersonalId.lastName}"/></td>
-                        <td><c:out value="${item.jobsByJobId.function}"/></td>
-                        <td><a href="profile/${item.id}">Профиль</a></td>
+                        <td><a href="${pageContext.request.contextPath}/company/department/${item.id}">
+                        <c:out value="${item.name}"/><br>
+                        </a></td>
+                        <td><c:out value="${item.officeByOfficeId.address}"/><br></td>
+                        <td><c:out value="${item.description}"/><br></td>
                     </tr>
+
                 </c:forEach>
             </table>
         </th>
     </tr>
 </table>
 
-<table width="80%" border="2" cellpadding="4" cellspacing="1">
-    <caption>Убрать, пока для дебага</caption>
+<table width="60%">
     <tr>
-        <th>Id</th>
-        <th>firstName</th>
-        <th>lastName</th>
-        <th>birthDate</th>
-        <th>phone</th>
-        <th>email</th>
-        <th>address</th>
-        <th>education</th>
-        <th>О себе</th>
+        <th>Наши Руководители</th>
     </tr>
-    <c:forEach items="${persons}" var="item">
-        <tr>
-            <td><c:out value="${item.id}"/></td>
-            <td><c:out value="${item.firstName}"/></td>
-            <td><c:out value="${item.lastName}"/></td>
-            <td><c:out value="${item.birthDate}"/></td>
-            <td><c:out value="${item.phone}"/></td>
-            <td><c:out value="${item.email}"/></td>
-            <td><c:out value="${item.address}"/></td>
-            <td><c:out value="${item.education}"/></td>
-            <td><c:out value="${item.selfDescription}"/></td>
-        </tr>
-    </c:forEach>
+    <tr>
+        <th>
+            <table width="100%" border="1" cellpadding="4" valign="top">
+                <tr>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Почта</th>
+                </tr>
+                <c:forEach items="${presidents}" var="item">
+                <tr>
+                    <td><c:out value="${item.personaldataByPersonalId.firstName}"/><br></td>
+                    <td><c:out value="${item.personaldataByPersonalId.lastName}"/><br></td>
+                    <td><c:out value="${item.personaldataByPersonalId.email}"/><br></td>
+                    <td><a href="${pageContext.request.contextPath}/company/department/${item.id}">
+                        <c:out value="${item.id}"/><br>
+                    </a></td>
+                </tr>
+
+                </c:forEach>
+            </table>
+        </th>
+    </tr>
 </table>
-</body>
+
 </html>

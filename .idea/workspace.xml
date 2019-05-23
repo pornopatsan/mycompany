@@ -10,74 +10,34 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/storage_v2/_src_/database/pracbackend.cAQTMg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/storage_v2/_src_/database/pracbackend.cAQTMg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/potgresqldb/populateDB" beforeDir="false" afterPath="$PROJECT_DIR$/db/potgresqldb/populateDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/company/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/controller/DepartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/controller/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/company/controller/EmployeeSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/controller/EmployeeSearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/company/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/company/dao/DepartmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/dao/DepartmentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/dao/EmployeeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/company/dao/EmployeedepartmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/dao/EmployeedepartmentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/dao/EmployeejobshistoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/dao/EmployeejobshistoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/dao/JobsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/dao/JobsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/hibernate/AccountsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/hibernate/AccountsEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/company/hibernate/DepartmentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/hibernate/DepartmentEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/company/hibernate/EmployeeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/hibernate/EmployeeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/hibernate/JobsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/hibernate/JobsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/hibernate/LocationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/hibernate/LocationEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/company/hibernate/OfficeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/hibernate/OfficeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/hibernate/PersonaldataEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/hibernate/PersonaldataEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/service/DepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/service/EmployeeJobsHistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/service/EmployeeJobsHistoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/service/JobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/company/utils/SearchParamsBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/company/utils/SearchParamsBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/application-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/application-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/company/dao/DepartmentDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/company/dao/DepartmentDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/company/dao/EmployeeDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/company/dao/EmployeeDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/department.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/department.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/company/controller/DepartmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/controller/DepartmentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/company/controller/EmployeeSearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/controller/EmployeeSearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/company/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/controller/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/company/controller/ProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/controller/ProfileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/controller/validators/EmployeeValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/dao/DepartmentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/dao/DepartmentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/dao/EmployeeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/dao/EmployeeDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/company/dao/EmployeedepartmentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/dao/EmployeedepartmentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/dao/EmployeejobshistoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/dao/EmployeejobshistoryDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/dao/JobsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/dao/JobsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/hibernate/AccountsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/hibernate/AccountsEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/hibernate/DepartmentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/hibernate/DepartmentEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/company/hibernate/EmployeeEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/hibernate/EmployeeEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/hibernate/JobsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/hibernate/JobsEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/hibernate/LocationEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/hibernate/LocationEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/hibernate/OfficeEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/hibernate/OfficeEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/hibernate/PersonaldataEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/hibernate/PersonaldataEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/service/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/service/DepartmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/service/EmployeeJobsHistoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/service/EmployeeJobsHistoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/service/JobService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/service/JobService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/company/utils/SearchParamsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/company/utils/SearchParamsBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/application-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/application-context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/controller/DepartmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/controller/DepartmentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/controller/EmployeeSearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/controller/EmployeeSearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/controller/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/controller/ProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/controller/ProfileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/controller/validators/EmployeeValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/dao/DepartmentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/dao/DepartmentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/dao/EmployeeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/dao/EmployeeDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/dao/EmployeedepartmentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/dao/EmployeedepartmentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/dao/EmployeejobshistoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/dao/EmployeejobshistoryDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/dao/JobsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/dao/JobsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/AccountsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/AccountsEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/DepartmentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/DepartmentEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/EmployeeEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/EmployeeEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/JobsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/JobsEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/LocationEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/LocationEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/OfficeEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/OfficeEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/PersonaldataEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/hibernate/PersonaldataEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/service/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/service/DepartmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/service/EmployeeJobsHistoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/service/EmployeeJobsHistoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/service/JobService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/service/JobService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/utils/SearchParamsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/classes/company/utils/SearchParamsBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/pages/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/pages/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/company/dao/DepartmentDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/company/dao/DepartmentDaoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/company/dao/EmployeeDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/company/dao/EmployeeDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/pages/department.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/pages/department.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/pages/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/pages/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/pages/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/pages/search.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -164,11 +124,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/company/controller/DepartmentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-115">
+              <caret line="46" column="63" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/department.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="677">
+              <caret line="47" column="21" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add_department_form.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/employee_promote_form.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/company/controller/ProfileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="214" column="9" lean-forward="true" selection-start-line="214" selection-start-column="9" selection-end-line="214" selection-end-column="9" />
+            <state relative-caret-position="367">
+              <caret line="171" column="12" lean-forward="true" selection-start-line="168" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -217,7 +222,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/company/dao/PersonaldataDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/dao/AccountsDao.java" />
@@ -227,47 +231,48 @@
         <option value="$PROJECT_DIR$/src/test/java/company/dao/OfficeDaoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/company/dao/PersonaldataDaoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/company/dao/EmployeedepartmentDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/company/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile_update_form.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/employee_promote_form.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new_employee_form.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new_employee_personaldata_form.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search_results.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/company/controller/EmployeeSearchController.java" />
         <option value="$PROJECT_DIR$/src/test/java/company/dao/EmployeejobshistoryDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/department.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/company/utils/SearchParamsBean.java" />
         <option value="$PROJECT_DIR$/src/test/java/company/dao/DepartmentDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/service/DepartmentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/company/controller/DepartmentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/company/dao/EmployeeDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/dao/JobsDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/service/JobService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/company/dao/DepartmentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/dao/EmployeejobshistoryDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/service/EmployeeJobsHistoryService.java" />
         <option value="$PROJECT_DIR$/src/test/java/company/dao/EmployeeDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/hibernate/PersonaldataEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/hibernate/AccountsEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/company/hibernate/DepartmentEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/hibernate/LocationEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/company/hibernate/OfficeEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/hibernate/JobsEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/hibernate/EmployeejobsHistoryEntity.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/application-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/company/hibernate/EmployeeDepartmentEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/company/hibernate/EmployeeEntity.java" />
         <option value="$PROJECT_DIR$/db/potgresqldb/initDB" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add_employee_department_form.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/company/dao/EmployeedepartmentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/service/EmployeedepartmentService.java" />
         <option value="$PROJECT_DIR$/db/potgresqldb/populateDB" />
         <option value="$PROJECT_DIR$/src/main/java/company/controller/ProfileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/company/dao/EmployeeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/company/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/company/dao/EmployeedepartmentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/company/hibernate/EmployeeEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/company/controller/EmployeeSearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/company/hibernate/OfficeEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/company/dao/DepartmentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/company/hibernate/DepartmentEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/department.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/company/controller/DepartmentController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add_department_form.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
       </list>
     </option>
   </component>
@@ -307,9 +312,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="702" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -319,6 +323,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -359,24 +364,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycompany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycompany" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycompany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycompany" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="hibernate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -387,22 +374,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycompany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycompany" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycompany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycompany" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mycompany" type="b2602c69:ProjectViewProjectNode" />
@@ -428,32 +399,10 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="mycompany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycompany" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycompany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycompany" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycompany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycompany" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -466,7 +415,7 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="b572e24d-c2b7-4407-8eb3-ba55df456bc1" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558618570476" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558627146199" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -479,7 +428,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="spring" />
+    <property name="settings.editor.selected.configurable" value="consents" />
   </component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
@@ -827,9 +776,9 @@
       <item itemvalue="JUnit.All in mycompany" />
       <item itemvalue="JUnit.OfficeDaoTest.saveUpdateDelete" />
       <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByDepartmentID" />
-      <item itemvalue="Tomcat Server.Tomcat 7.0.93" />
       <item itemvalue="JUnit.DepartmentDaoTest.getEmployeeByDepartmentID" />
       <item itemvalue="JUnit.DepartmentDaoTest.getDepatmentByHeadId" />
+      <item itemvalue="Tomcat Server.Tomcat 7.0.93" />
     </list>
     <recent_temporary>
       <list>
@@ -868,6 +817,7 @@
       <workItem from="1555852678023" duration="21585000" />
       <workItem from="1556137454587" duration="44107000" />
       <workItem from="1558531403272" duration="33209000" />
+      <workItem from="1558624724756" duration="2409000" />
     </task>
     <servers />
   </component>
@@ -904,7 +854,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172970000" />
+    <option name="totallyTimeSpent" value="181197000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -925,7 +875,7 @@
       <window_info id="Favorites" order="3" sideWeight="0.45081967" side_tool="true" weight="0.20355412" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Persistence" order="5" sideWeight="0.45081967" side_tool="true" weight="0.20355412" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.5491803" visible="true" weight="0.21001616" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.5491803" visible="true" weight="0.21324718" />
       <window_info id="Structure" order="7" sideWeight="0.45081967" side_tool="true" weight="0.20355412" />
       <window_info id="JavaEE:App" order="8" sideWeight="0.44918033" side_tool="true" weight="0.2003231" />
       <window_info id="Web" order="9" sideWeight="0.45081967" side_tool="true" weight="0.20355412" />
@@ -1023,20 +973,69 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/PersonaldataEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="530">
+          <caret line="171" column="48" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/company/dao/EmployeejobshistoryDaoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new_employee_form.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add_employee_department_form.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#588#589#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="13" column="57" lean-forward="true" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/potgresqldb/populateDB">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/employeejobs_history">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/personaldata">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/JobsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="61" column="66" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/EmployeejobsHistoryEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="90" column="30" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/JobsEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/jobs">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1047,24 +1046,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/department.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/service/EmployeedepartmentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state relative-caret-position="500">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/company/dao/DepartmentDaoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/EmployeejobshistoryDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="87" column="29" lean-forward="true" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
+        <state relative-caret-position="-265">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="34" column="64" lean-forward="true" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1516#1532#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/EmployeedepartmentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="74" column="61" lean-forward="true" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/EmployeeEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#1451#1452#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/EmployeeDepartmentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#1149#1150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/service/EmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#418#419#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/company/utils/SearchParamsBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+        <state relative-caret-position="900">
+          <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
           <folding>
             <element signature="e#298#299#0" expanded="true" />
             <element signature="e#323#324#0" expanded="true" />
@@ -1098,59 +1168,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/service/EmployeeService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.4.RELEASE/spring-web-4.1.4.RELEASE.jar!/org/springframework/web/bind/annotation/support/HandlerMethodInvoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
-          <folding>
-            <element signature="e#994#995#0" expanded="true" />
-          </folding>
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="78" column="24" lean-forward="true" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/service/DepartmentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/service/JobService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#770#771#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/service/EmployeeJobsHistoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="34" column="83" selection-start-line="34" selection-start-column="83" selection-end-line="34" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/company/dao/EmployeeDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="52" column="52" lean-forward="true" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/PersonaldataDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/OfficeDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
@@ -1159,134 +1191,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/OfficeEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="560">
+          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/LocationEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="66" column="100" selection-start-line="66" selection-start-column="100" selection-end-line="66" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/controller/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="33" column="78" lean-forward="true" selection-start-line="33" selection-start-column="78" selection-end-line="33" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/JobsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/DepartmentEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="77" column="41" lean-forward="true" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/AccountsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="51" column="40" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/EmployeejobshistoryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="59" column="31" lean-forward="true" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/JobsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="66" column="15" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/application-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="62" lean-forward="true" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
+        <state relative-caret-position="500">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/DepartmentDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
+        <state relative-caret-position="420">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/EmployeejobsHistoryEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/department">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/EmployeeDepartmentEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/controller/EmployeeSearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-805" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/potgresqldb/initDB">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="95" column="2" lean-forward="true" selection-start-line="95" selection-start-column="2" selection-end-line="95" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/Database Sheme.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/PersonaldataEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="171" column="48" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new_employee_form.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/EmployeeEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="80" column="30" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="30" />
+        <state relative-caret-position="650">
+          <caret line="110" column="28" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new_employee_personaldata_form.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/hibernate/DepartmentEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="39" />
+        <state relative-caret-position="545">
+          <caret line="94" column="38" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
+          <folding>
+            <element signature="e#2514#2515#0" expanded="true" />
+            <element signature="e#2548#2549#0" expanded="true" />
+            <element signature="e#2603#2604#0" expanded="true" />
+            <element signature="e#2649#2650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="1215">
           <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new_employee_personaldata_form.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/controller/ProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="171" column="12" lean-forward="true" selection-start-line="168" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/company/controller/DepartmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115">
+          <caret line="46" column="63" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add_department_form.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1297,138 +1285,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/EmployeedepartmentDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/department.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="85" column="47" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+        <state relative-caret-position="677">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add_employee_department_form.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="57" lean-forward="true" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/service/EmployeedepartmentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/potgresqldb/populateDB">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/employeejobs_history">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/employeejobs_history">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/employeejobs_history">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/employeejobs_history">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/employee_department">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/employee_department">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/employee_department">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/employee_department">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/personaldata">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/personaldata">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/personaldata">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/personaldata">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/company/controller/ProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="214" column="9" lean-forward="true" selection-start-line="214" selection-start-column="9" selection-end-line="214" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="318">
+          <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
         </state>
       </provider>
     </entry>

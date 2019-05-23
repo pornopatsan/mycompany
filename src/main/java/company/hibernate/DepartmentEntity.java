@@ -12,6 +12,8 @@ public class DepartmentEntity {
     private DepartmentEntity departmentByHeadId;
     private OfficeEntity officeByOfficeId;
 
+    private Integer tmpOfficeId;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -65,7 +67,7 @@ public class DepartmentEntity {
         return result;
     }
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "head_id", referencedColumnName = "id")
     public DepartmentEntity getDepartmentByHeadId() {
         return departmentByHeadId;
@@ -75,7 +77,7 @@ public class DepartmentEntity {
         this.departmentByHeadId = departmentByHeadId;
     }
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "office_id", referencedColumnName = "id")
     public OfficeEntity getOfficeByOfficeId() {
         return officeByOfficeId;
@@ -85,4 +87,11 @@ public class DepartmentEntity {
         this.officeByOfficeId = officeByOfficeId;
     }
 
+    public Integer getTmpOfficeId() {
+        return tmpOfficeId;
+    }
+
+    public void setTmpOfficeId(Integer tmpOfficeId) {
+        this.tmpOfficeId = tmpOfficeId;
+    }
 }

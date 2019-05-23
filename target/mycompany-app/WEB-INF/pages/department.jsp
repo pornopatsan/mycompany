@@ -41,9 +41,13 @@
     </tr>
 </table>
 
+<h4><a href="${pageContext.request.contextPath}/company/delete_department?id=${department.id}">Удалить</a></h4>
+
 <table border="1" width="50%">
     <tr>
-        <th>Отделения под управлением</th>
+        <th>Отделения под управлением
+            <a href="${pageContext.request.contextPath}/company/add_department_form?headId=${department.id}">Добавить</a>
+        </th>
     </tr>
     <c:forEach items="${departments}" var="item">
         <tr>
@@ -61,6 +65,7 @@
         <th>ID</th>
         <th>Имя</th>
         <th>Фамилия</th>
+        <th>Должность</th>
     </tr>
     <c:forEach items="${employee}" var="item">
         <tr>
@@ -74,6 +79,9 @@
             </td>
             <td>
                 <c:out value="${item.personaldataByPersonalId.lastName}"/>
+            </td>
+            <td>
+                <c:out value="${item.jobsByJobId.function}"/>
             </td>
         </tr>
     </c:forEach>
