@@ -8,8 +8,6 @@ import java.util.List;
 public class JobsEntity {
     private Integer id;
     private String function;
-    private List<EmployeeEntity> employeesById;
-    private List<EmployeejobsHistoryEntity> employeejobsHistoriesById;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -50,23 +48,5 @@ public class JobsEntity {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (function != null ? function.hashCode() : 0);
         return result;
-    }
-
-    @OneToMany(mappedBy = "jobsByJobId", fetch = FetchType.EAGER)
-    public List<EmployeeEntity> getEmployeesById() {
-        return employeesById;
-    }
-
-    public void setEmployeesById(List<EmployeeEntity> employeesById) {
-        this.employeesById = employeesById;
-    }
-
-    @OneToMany(mappedBy = "jobsByJobId", fetch = FetchType.EAGER)
-    public List<EmployeejobsHistoryEntity> getEmployeejobsHistoriesById() {
-        return employeejobsHistoriesById;
-    }
-
-    public void setEmployeejobsHistoriesById(List<EmployeejobsHistoryEntity> employeejobsHistoriesById) {
-        this.employeejobsHistoriesById = employeejobsHistoriesById;
     }
 }

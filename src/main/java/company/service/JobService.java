@@ -1,6 +1,7 @@
 package company.service;
 
 import company.dao.JobsDao;
+import company.hibernate.EmployeeEntity;
 import company.hibernate.JobsEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -29,5 +30,9 @@ public class JobService {
 
     public List<JobsEntity> findAll() {
         return dao.findAll();
+    }
+
+    public List<JobsEntity> findByEmployee(EmployeeEntity employee) {
+        return dao.findByEmployee(employee);
     }
 }

@@ -47,10 +47,10 @@
         <td>Фамилия</td>
         <td><c:out value="${personaldata.lastName}"/></td>
     </tr>
-    <tr>
-        <td>Дата Рождения</td>
-        <td><c:out value="${personaldata.birthDate}"/></td>
-    </tr>
+    <%--<tr>--%>
+        <%--<td>Дата Рождения</td>--%>
+        <%--<td><c:out value="${personaldata.birthDate}"/></td>--%>
+    <%--</tr>--%>
     <tr>
         <td>Телефон</td>
         <td><c:out value="${personaldata.phone}"/></td>
@@ -77,8 +77,14 @@
             <td><a href="${pageContext.request.contextPath}/company/department/${item.id}">
                 <c:out value="${item.name}"/>
             </a></td>
+            <td><a href="${pageContext.request.contextPath}/company/delete_employee_department?did=${item.id}&eid=${employee.id}">
+                Удалить
+            </a></td>
         </tr>
     </c:forEach>
+    <tr><td>
+        <a href="${pageContext.request.contextPath}/company/add_employee_department_form?id=${employee.id}">Добавить</a>
+    </td></tr>
 </table>
 
 <table border="1" width="50%">
@@ -98,6 +104,7 @@
         </tr>
     </c:forEach>
 </table>
+<h4><a href="${pageContext.request.contextPath}/company/delete_employee?id=${employee.id}">Удалить (Уволить)</a></h4>
 
 </body>
 </html>

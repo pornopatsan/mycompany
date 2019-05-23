@@ -57,13 +57,6 @@ public class EmployeeDaoTest {
     }
 
     @Test
-    public void getJobHistory() {
-        EmployeeEntity tmp = _dao.findById(1);
-        List<EmployeejobsHistoryEntity> jobs = tmp.getEmployeejobsHistoriesById();
-        assertNotNull(jobs);
-    }
-
-    @Test
     public void getEmployeeByDepartmentID() {
         assertEquals("Board of Directors", _d_dao.findById(1).getName());
         List<EmployeeEntity> tmp = _dao.findByDepartment(_d_dao.findById(1));

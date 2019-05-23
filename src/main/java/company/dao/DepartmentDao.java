@@ -65,4 +65,15 @@ public class DepartmentDao {
         session.close();
         return res;
     }
+
+    public List<DepartmentEntity> findByHead(DepartmentEntity head) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Query query = session.createQuery(
+                "From DepartmentEntity\n Where head_id = :head"
+        );
+        query.setParameter("head", head.getId());
+        List<DepartmentEntity> res = (List<DepartmentEntity>) query.list();
+        session.close();
+        return res;
+    }
 }

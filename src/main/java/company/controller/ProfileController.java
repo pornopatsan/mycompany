@@ -1,10 +1,7 @@
 package company.controller;
 
 import company.dao.JobsDao;
-import company.hibernate.EmployeeEntity;
-import company.hibernate.EmployeejobsHistoryEntity;
-import company.hibernate.JobsEntity;
-import company.hibernate.PersonaldataEntity;
+import company.hibernate.*;
 import company.service.*;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +33,9 @@ public class ProfileController {
     @Autowired
     EmployeeJobsHistoryService ejhService;
 
+    @Autowired
+    EmployeedepartmentService edeService;
+
     @RequestMapping(value = "/profile/{id}", method = RequestMethod.GET)
     public String profilePage(ModelMap map, @PathVariable int id) {
         try {
@@ -43,7 +43,7 @@ public class ProfileController {
             map.addAttribute("employee", res);
             map.addAttribute("personaldata", res.getPersonaldataByPersonalId());
 
-            List<EmployeejobsHistoryEntity> jh = res.getEmployeejobsHistoriesById();
+            List<EmployeejobsHistoryEntity> jh = ejhService.findByEmpoyee(res);
             map.addAttribute("jobsHistory", jh);
             map.addAttribute("departments", dService.findByEmployee(res));
             return "profile";
@@ -149,11 +149,68 @@ public class ProfileController {
         try {
             EmployeeEntity employee = new EmployeeEntity();
             employee.setHireDate(new Date(Calendar.getInstance().getTime().getTime()));
+            employee.setSalary(employeeInput.getSalary());
             employee.setJobsByJobId(jService.findById(employeeInput.getTmpJobId()));
             employee.setPersonaldataByPersonalId(pService.findById(employeeInput.getTmpPersonalId()));
             service.save(employee);
             return new ModelAndView("redirect:profile/" + employee.getId().toString());
         } catch (Exception e) {
+            return new ModelAndView("redirect:main");
+        }
+    }
+
+    @RequestMapping(value = "/delete_employee")
+    public ModelAndView deleteEmployee(@RequestParam Integer id) {
+        try {
+            EmployeeEntity employeeEntity = service.findById(id);
+            for (EmployeejobsHistoryEntity ejh : ejhService.findByEmpoyee(employeeEntity)) {
+                ejhService.delete(ejh);
+            }
+            for (EmployeeDepartmentEntity ede: edeService.findByEmployee(employeeEntity)) {
+                edeService.delete(ede);
+            }
+            service.delete(employeeEntity);
+            return new ModelAndView("redirect:main");
+        } catch (Exception e) {
+//            throw e;
+            return new ModelAndView("redirect:main");
+        }
+    }
+
+    @RequestMapping(value = "/add_employee_department_form")
+    public ModelAndView addEmployeeDepartmentForm(@RequestParam Integer id) {
+        try {
+            ModelAndView modelAndView = new ModelAndView("add_employee_department_form");
+            modelAndView.getModelMap().addAttribute("employee", service.findById(id));
+            modelAndView.getModelMap().addAttribute("departmentList", dService.findAll());
+            return modelAndView;
+        } catch (Exception e) {
+            return new ModelAndView("redirect:main");
+        }
+    }
+
+    @RequestMapping(value = "/add_employee_department")
+    public ModelAndView addEmployeeDepartment(@ModelAttribute EmployeeEntity employeeInput) {
+        try {
+            EmployeeDepartmentEntity ede = new EmployeeDepartmentEntity();
+            ede.setEmployeeByEmployeeId(service.findById(employeeInput.getId()));
+            ede.setDepartmentByDepartmentId(dService.findById(employeeInput.getTmpJobId()));
+            edeService.save(ede);
+            return new ModelAndView("redirect:profile/" + ede.getEmployeeByEmployeeId().getId().toString());
+        } catch (Exception e) {
+            return new ModelAndView("redirect:main");
+        }
+    }
+
+    @RequestMapping(value = "/delete_employee_department")
+    public ModelAndView deleteEmployeeDepartmentForm(@RequestParam Integer did, @RequestParam Integer eid) {
+        try {
+            EmployeeDepartmentEntity ede = edeService.findByEmployeeAndDepartment(service.findById(eid), dService.findById(did));
+            Integer employee_id = ede.getEmployeeByEmployeeId().getId();
+            edeService.delete(ede);
+            return new ModelAndView("redirect:profile/" + employee_id.toString());
+        } catch (Exception e) {
+//            throw e;
             return new ModelAndView("redirect:main");
         }
     }

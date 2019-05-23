@@ -1,6 +1,9 @@
 package company.dao;
 
+import company.hibernate.DepartmentEntity;
 import company.hibernate.EmployeeDepartmentEntity;
+import company.hibernate.EmployeeEntity;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import company.utils.HibernateSessionFactoryUtil;
@@ -53,5 +56,38 @@ public class EmployeedepartmentDao {
         return res;
     }
 
+    public List<EmployeeDepartmentEntity> findByEmployee(EmployeeEntity employee) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Query query = session.createQuery(
+                "From EmployeeDepartmentEntity Where employee_id = :employee"
+        );
+        query.setParameter("employee", employee.getId());
+        List<EmployeeDepartmentEntity> res = (List<EmployeeDepartmentEntity>) query.list();
+        session.close();
+        return res;
+    }
+
+    public List<EmployeeDepartmentEntity> findByDepartment(DepartmentEntity department) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Query query = session.createQuery(
+                "From EmployeeDepartmentEntity Where department_id = :department"
+        );
+        query.setParameter("employee", department.getId());
+        List<EmployeeDepartmentEntity> res = (List<EmployeeDepartmentEntity>) query.list();
+        session.close();
+        return res;
+    }
+
+    public EmployeeDepartmentEntity findByEmployeeAndDepartment(EmployeeEntity eid, DepartmentEntity did) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Query query = session.createQuery(
+                "From EmployeeDepartmentEntity Where department_id = :did And employee_id = :eid"
+        );
+        query.setParameter("did", did.getId());
+        query.setParameter("eid", eid.getId());
+        EmployeeDepartmentEntity res = ((List<EmployeeDepartmentEntity>) query.list()).get(0);
+        session.close();
+        return res;
+    }
 }
 

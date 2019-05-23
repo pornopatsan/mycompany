@@ -36,4 +36,7 @@ public class DepartmentService {
         return dao.findByEmployee(employee);
     }
 
+    public List<DepartmentEntity> findByHead(DepartmentEntity head) {
+        return dao.findByHead(head);
+    }
 }

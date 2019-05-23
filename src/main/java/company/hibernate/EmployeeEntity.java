@@ -12,7 +12,6 @@ public class EmployeeEntity {
     private Date hireDate;
     private PersonaldataEntity personaldataByPersonalId;
     private JobsEntity jobsByJobId;
-    private List<EmployeejobsHistoryEntity> employeejobsHistoriesById;
 
     private Integer tmpPersonalId;
     private Integer tmpJobId;
@@ -68,7 +67,7 @@ public class EmployeeEntity {
         return result;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "personal_id", referencedColumnName = "id")
     public PersonaldataEntity getPersonaldataByPersonalId() {
         return personaldataByPersonalId;
@@ -86,15 +85,6 @@ public class EmployeeEntity {
 
     public void setJobsByJobId(JobsEntity jobsByJobId) {
         this.jobsByJobId = jobsByJobId;
-    }
-
-    @OneToMany(mappedBy = "employeeByEmployeeId", fetch = FetchType.EAGER)
-    public List<EmployeejobsHistoryEntity> getEmployeejobsHistoriesById() {
-        return employeejobsHistoriesById;
-    }
-
-    public void setEmployeejobsHistoriesById(List<EmployeejobsHistoryEntity> employeejobsHistoriesById) {
-        this.employeejobsHistoriesById = employeejobsHistoriesById;
     }
 
     @Basic

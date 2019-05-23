@@ -59,6 +59,7 @@
     <bean id="employeedepartmentDao" class="company.dao.EmployeedepartmentDao"/>
 
     <bean id="departmentService" class="company.service.DepartmentService"/>
+    <bean id="employeedepartmentService" class="company.service.EmployeedepartmentService"/>
     <bean id="employeeJobsHistoryService" class="company.service.EmployeeJobsHistoryService"/>
     <bean id="employeeService" class="company.service.EmployeeService"/>
     <bean id="jobService" class="company.service.JobService"/>

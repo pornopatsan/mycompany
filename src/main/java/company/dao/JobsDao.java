@@ -1,7 +1,9 @@
 package company.dao;
 
+import company.hibernate.EmployeeEntity;
 import company.hibernate.JobsEntity;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import company.utils.HibernateSessionFactoryUtil;
@@ -52,5 +54,17 @@ public class JobsDao {
         List<JobsEntity> res = (List<JobsEntity>) session.createQuery("From JobsEntity").list();
         session.close();
         return res;
-}
+    }
+
+    public List<JobsEntity> findByEmployee(EmployeeEntity employee) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Query query = session.createQuery(
+                "Select jobsByJobId From EmployeejobsHistoryEntity\n" +
+                        "Where employee_id  = :ee"
+        );
+        query.setParameter("ee", employee.getId());
+        List<JobsEntity> res = (List<JobsEntity>) query.list();
+        session.close();
+        return res;
+    }
 }

@@ -11,7 +11,6 @@ public class DepartmentEntity {
     private String description;
     private DepartmentEntity departmentByHeadId;
     private OfficeEntity officeByOfficeId;
-    private List<DepartmentEntity> departmentsById;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -66,7 +65,7 @@ public class DepartmentEntity {
         return result;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "head_id", referencedColumnName = "id")
     public DepartmentEntity getDepartmentByHeadId() {
         return departmentByHeadId;
@@ -76,7 +75,7 @@ public class DepartmentEntity {
         this.departmentByHeadId = departmentByHeadId;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "office_id", referencedColumnName = "id")
     public OfficeEntity getOfficeByOfficeId() {
         return officeByOfficeId;
@@ -86,12 +85,4 @@ public class DepartmentEntity {
         this.officeByOfficeId = officeByOfficeId;
     }
 
-    @OneToMany(mappedBy = "departmentByHeadId", fetch = FetchType.EAGER)
-    public List<DepartmentEntity> getDepartmentsById() {
-        return departmentsById;
-    }
-
-    public void setDepartmentsById(List<DepartmentEntity> departmentsById) {
-        this.departmentsById = departmentsById;
-    }
 }

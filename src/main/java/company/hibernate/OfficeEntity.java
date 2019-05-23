@@ -78,7 +78,7 @@ public class OfficeEntity {
         return result;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "location_id", referencedColumnName = "id")
     public LocationEntity getLocationByLocationId() {
         return locationByLocationId;
@@ -88,7 +88,7 @@ public class OfficeEntity {
         this.locationByLocationId = locationByLocationId;
     }
 
-    @OneToMany(mappedBy = "officeByOfficeId", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "officeByOfficeId", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     public List<DepartmentEntity> getDepartmentsById() {
         return departmentsById;
     }

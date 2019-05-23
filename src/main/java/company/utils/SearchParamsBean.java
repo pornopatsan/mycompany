@@ -9,7 +9,6 @@ public class SearchParamsBean {
     private String firstName;
     private String lastName;
 
-
     public Integer getId() {
         return id;
     }
@@ -26,6 +25,14 @@ public class SearchParamsBean {
         this.jobId = jobId;
     }
 
+    public Integer getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(Integer departmentId) {
+        this.departmentId = departmentId;
+    }
+
     public Double getSalaryDownLimit() {
         return salaryDownLimit;
     }
@@ -40,5 +47,21 @@ public class SearchParamsBean {
 
     public void setSalaryUpLimit(Double salaryUpLimit) {
         this.salaryUpLimit = salaryUpLimit;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

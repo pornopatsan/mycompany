@@ -77,8 +77,15 @@ public class DepartmentDaoTest {
         assertNotNull(tmp);
         for (DepartmentEntity e : tmp) {
             assertNotNull(e);
-//            assertEquals("Sapaev", e.getPersonaldataByPersonalId().getLastName());
         }
     }
 
+    @Test
+    public void getDepatmentByHeadId() {
+        List<DepartmentEntity> tmp = _dao.findByHead(_dao.findById(1));
+        assertNotNull(tmp);
+        for (DepartmentEntity e : tmp) {
+            assertNotNull(e);
+        }
+    }
 }

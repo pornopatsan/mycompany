@@ -49,7 +49,7 @@ public class AccountsEntity {
         return result;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "personal_id", referencedColumnName = "id")
     public PersonaldataEntity getPersonaldataByPersonalId() {
         return personaldataByPersonalId;

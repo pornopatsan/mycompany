@@ -30,7 +30,7 @@ public class DepartmentController {
     public String profilePage(ModelMap map, @PathVariable int id) {
         DepartmentEntity res = departmentService.findById(id);
         map.addAttribute("department", res);
-        map.addAttribute("departments", res.getDepartmentsById());
+        map.addAttribute("departments", departmentService.findByHead(res));
         List<EmployeeEntity> employee = employeeService.findByDepartment(res);
         map.addAttribute("employee", employee);
         return "department";
