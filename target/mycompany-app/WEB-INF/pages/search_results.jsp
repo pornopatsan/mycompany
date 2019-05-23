@@ -3,6 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html>
+<head><title>Результаты</title></head>
 <body>
 <a href="${pageContext.request.contextPath}/company/search">Назад</a><br>
 <h2> (DEMO) Результаты поиска </h2>

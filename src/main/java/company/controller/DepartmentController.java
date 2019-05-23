@@ -49,8 +49,7 @@ public class DepartmentController {
             modelAndView.getModelMap().addAttribute("offices", oService.findAll());
             return modelAndView;
         } catch (Exception e) {
-            throw e;
-//            return new ModelAndView("redirect:main");
+            return new ModelAndView("redirect:main");
         }
     }
 
@@ -62,8 +61,7 @@ public class DepartmentController {
             departmentService.save(department);
             return new ModelAndView("redirect:department/" + department.getId().toString());
         } catch (Exception e) {
-            throw e;
-//            return new ModelAndView("redirect:main");
+            return new ModelAndView("redirect:department/" + headId.toString());
         }
     }
 
