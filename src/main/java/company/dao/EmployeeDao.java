@@ -1,7 +1,9 @@
 package company.dao;
 
+import company.hibernate.DepartmentEntity;
 import company.hibernate.EmployeeEntity;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import company.utils.HibernateSessionFactoryUtil;
@@ -49,6 +51,18 @@ public class EmployeeDao {
     public List<EmployeeEntity> findAll() {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         List<EmployeeEntity> res = (List<EmployeeEntity>) session.createQuery("From EmployeeEntity").list();
+        session.close();
+        return res;
+    }
+
+    public List<EmployeeEntity> findByDepartment(DepartmentEntity department) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Query query = session.createQuery(
+                "Select employeeByEmployeeId From EmployeeDepartmentEntity\n" +
+                        "Where department_id = :did"
+        );
+        query.setParameter("did", department.getId());
+        List<EmployeeEntity> res = (List<EmployeeEntity>) query.list();
         session.close();
         return res;
     }

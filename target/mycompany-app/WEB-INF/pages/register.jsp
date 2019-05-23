@@ -11,7 +11,7 @@
 <form:form id="formCreate" modelAttribute="newPersonaldata" method="post" action="registersubmit">
 
     <b>Имя</b><br>
-    <form:input path="firstName" value="${newPersonaldata.lastName}"/><br>
+    <form:input path="firstName" value="${newPersonaldata.firstName}"/><br>
 
     <b>Фамилия</b><br>
     <form:input path="lastName" value="${newPersonaldata.lastName}"/><br>

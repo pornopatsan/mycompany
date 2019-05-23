@@ -25,7 +25,6 @@ public class EmployeejobshistoryDaoTest {
 
     @Test
     public void findById() {
-        assertNull(_dao.findById(1));
         assertNull(_dao.findById(-1));
     }
 

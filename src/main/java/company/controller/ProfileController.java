@@ -5,9 +5,7 @@ import company.hibernate.EmployeeEntity;
 import company.hibernate.EmployeejobsHistoryEntity;
 import company.hibernate.JobsEntity;
 import company.hibernate.PersonaldataEntity;
-import company.service.EmployeeJobsHistoryService;
-import company.service.EmployeeService;
-import company.service.PersonaldataService;
+import company.service.*;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,20 +28,27 @@ public class ProfileController {
     PersonaldataService pService;
 
     @Autowired
-    JobsDao jService;
+    JobService jService;
+
+    @Autowired
+    DepartmentService dService;
 
     @Autowired
     EmployeeJobsHistoryService ejhService;
 
     @RequestMapping(value = "/profile/{id}", method = RequestMethod.GET)
     public String profilePage(ModelMap map, @PathVariable int id) {
-        EmployeeEntity res = service.findById(id);
-        map.addAttribute("employee", res);
-        map.addAttribute("personaldata", res.getPersonaldataByPersonalId());
+        try {
+            EmployeeEntity res = service.findById(id);
+            map.addAttribute("employee", res);
+            map.addAttribute("personaldata", res.getPersonaldataByPersonalId());
 
-        List<EmployeejobsHistoryEntity> jh = res.getEmployeejobsHistoriesById();
-        map.addAttribute("jobsHistory", jh);
-        return "profile";
+            List<EmployeejobsHistoryEntity> jh = res.getEmployeejobsHistoriesById();
+            map.addAttribute("jobsHistory", jh);
+            return "profile";
+        } catch (Exception e) {
+            return "redirect:/company/main";
+        }
     }
 
     @RequestMapping(value = "/profile_update_form")
@@ -67,7 +72,7 @@ public class ProfileController {
             personaldata.setSelfDescription(personaldataInput.getSelfDescription());
             pService.update(personaldata);
 
-            return new ModelAndView("redirect:profile/" + personaldata.getId().toString());
+            return new ModelAndView("redirect:profile/" + personaldata.getEmployeesById().get(0).getId().toString());
         } catch (PersistenceException e) {
             return new ModelAndView("redirect:main");
         }
@@ -100,7 +105,53 @@ public class ProfileController {
             employee.setSalary(employeeInput.getSalary());
             service.update(employee);
 
-            return new ModelAndView("redirect:profile/" + employee.getPersonaldataByPersonalId().getId().toString());
+            return new ModelAndView("redirect:profile/" + employee.getId().toString());
+        } catch (Exception e) {
+            return new ModelAndView("redirect:main");
+        }
+    }
+
+    @RequestMapping(value = "/new_employee_form")
+    public ModelAndView addNewEmployeeForm() {
+        ModelAndView modelAndView = new ModelAndView("new_employee_form");
+        modelAndView.getModelMap().addAttribute("personaldata", new PersonaldataEntity());
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/new_employee_personaldata")
+    public ModelAndView addNewEmployee(@ModelAttribute PersonaldataEntity personaldataInput) {
+        try {
+            PersonaldataEntity personaldata = new PersonaldataEntity();
+            personaldata.setFirstName(personaldataInput.getFirstName());
+            personaldata.setLastName(personaldataInput.getLastName());
+            personaldata.setAddress(personaldataInput.getAddress());
+            personaldata.setEmail(personaldataInput.getEmail());
+            personaldata.setPhone(personaldataInput.getPhone());
+            personaldata.setEducation(personaldataInput.getEducation());
+            personaldata.setSelfDescription(personaldataInput.getSelfDescription());
+            pService.save(personaldata);
+
+            EmployeeEntity newEmployee = new EmployeeEntity();
+            newEmployee.setTmpPersonalId(personaldata.getId());
+
+            ModelAndView modelAndView = new ModelAndView("new_employee_personaldata_form");
+            modelAndView.getModelMap().addAttribute("employee", newEmployee);
+            modelAndView.getModelMap().addAttribute("jobsList", jService.findAll());
+            return modelAndView;
+        } catch (Exception e) {
+            return new ModelAndView("redirect:main");
+        }
+    }
+
+    @RequestMapping(value = "/new_employee")
+    public ModelAndView addNewEmployee(@ModelAttribute EmployeeEntity employeeInput) {
+        try {
+            EmployeeEntity employee = new EmployeeEntity();
+            employee.setHireDate(new Date(Calendar.getInstance().getTime().getTime()));
+            employee.setJobsByJobId(jService.findById(employeeInput.getTmpJobId()));
+            employee.setPersonaldataByPersonalId(pService.findById(employeeInput.getTmpPersonalId()));
+            service.save(employee);
+            return new ModelAndView("redirect:profile/" + employee.getId().toString());
         } catch (Exception e) {
             return new ModelAndView("redirect:main");
         }

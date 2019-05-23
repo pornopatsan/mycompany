@@ -14,11 +14,13 @@ import static org.junit.Assert.*;
 public class EmployeeDaoTest {
 
     private EmployeeDao _dao;
+    private DepartmentDao _d_dao;
     private static final double eps = 0.001;
 
     @Before
     public void setUp() throws Exception {
         _dao = new EmployeeDao();
+        _d_dao = new DepartmentDao();
     }
 
     @After
@@ -27,10 +29,9 @@ public class EmployeeDaoTest {
 
     @Test
     public void findById() {
-        assertEquals(10000.00, _dao.findById(1).getSalary(), eps);
         // Какой странный конструктор
-        Date expected = new Date(2019 - 1900, 2 - 1, 23);
-        assertEquals(expected, _dao.findById(1).getHireDate());
+        assertNotNull(_dao.findById(1));
+        assertNotNull(_dao.findById(1).getHireDate());
         assertNull(_dao.findById(-1));
     }
 
@@ -60,6 +61,16 @@ public class EmployeeDaoTest {
         EmployeeEntity tmp = _dao.findById(1);
         List<EmployeejobsHistoryEntity> jobs = tmp.getEmployeejobsHistoriesById();
         assertNotNull(jobs);
+    }
+
+    @Test
+    public void getEmployeeByDepartmentID() {
+        assertEquals("Board of Directors", _d_dao.findById(1).getName());
+        List<EmployeeEntity> tmp = _dao.findByDepartment(_d_dao.findById(1));
+        assertNotNull(tmp);
+        for (EmployeeEntity e : tmp) {
+            assertEquals("Sapaev", e.getPersonaldataByPersonalId().getLastName());
+        }
     }
 
 }

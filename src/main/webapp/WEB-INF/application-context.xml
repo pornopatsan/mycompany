@@ -46,6 +46,8 @@
         </property>
     </bean>
 
+    <bean id="searchParamsBean" class="company.utils.SearchParamsBean"/>
+
     <bean id="accountsDao" class="company.dao.AccountsDao"/>
     <bean id="departmentDao" class="company.dao.DepartmentDao"/>
     <bean id="employeeDao" class="company.dao.EmployeeDao"/>

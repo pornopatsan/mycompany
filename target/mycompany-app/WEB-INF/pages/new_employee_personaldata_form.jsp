@@ -3,22 +3,23 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
-    <title>Изменения Профиля</title>
+    <title>Новый Работник</title>
 </head>
 <input type="button" onclick="history.back();" value="Назад"/><br>
-<form:form modelAttribute="employee" method="post" action="employee_promote">
+<form:form modelAttribute="employee" method="post" action="new_employee">
     <form:hidden path="id"/>
+    <form:hidden path="tmpPersonalId"/>
 
-    <b>Новая зарплата</b><br>
+    <b>Зарплата</b><br>
     <form:input path="salary" value="${employee.salary}"/><br>
 
-    <b>Новая Должность</b><br>
+    <b>Должность</b><br>
     <form:select path="tmpJobId">
-        <form:option value="-1" label="--Please Select"/>
+        <form:option value="${null}" label="--Please Select"/>
         <form:options items="${jobsList}" itemValue="id" itemLabel="function"/>
     </form:select><br>
 
-    <form:button value="employee_promote">Готово!</form:button>
+    <form:button value="new_employee">Готово!</form:button>
 </form:form>
 <body>
 </body>

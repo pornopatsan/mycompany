@@ -5,18 +5,20 @@
 <html>
 <body>
 <h2> (DEMO) Пользователи </h2>
-<h3><a href="register.jsp">Зарегистрироваться</a></h3>
+<%--<h3><a href="register.jsp">Зарегистрироваться</a></h3>--%>
+<a href="${pageContext.request.contextPath}/company/new_employee_form">Новвый Работник</a><br>
+<a href="${pageContext.request.contextPath}/company/search">Искать работников</a><br>
+
 <table width="100%">
     <tr>
         <th>Наши Оффисы</th>
-        <th>Наши Сотрудники</th>
     </tr>
     <tr>
         <th>
             <table width="100%" border="1" cellpadding="4" valign="top">
                 <tr>
-                    <th>Телефон</th>
                     <th>Адрес</th>
+                    <th>Телефон</th>
                     <th>Описание</th>
                 </tr>
                 <c:forEach items="${offices}" var="item">
@@ -30,6 +32,13 @@
                 </c:forEach>
             </table>
         </th>
+    </tr>
+</table>
+<table width="100%">
+    <tr>
+        <th>Наши Сотрудники</th>
+    </tr>
+    <tr>
         <th>
             <table width="100%" border="1" cellpadding="4" cellspacing="1" valign="top">
                 <tr>
@@ -52,7 +61,7 @@
         </th>
     </tr>
 </table>
-<br>
+
 <table width="80%" border="2" cellpadding="4" cellspacing="1">
     <caption>Убрать, пока для дебага</caption>
     <tr>

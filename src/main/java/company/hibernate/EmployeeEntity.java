@@ -12,7 +12,7 @@ public class EmployeeEntity {
     private Date hireDate;
     private PersonaldataEntity personaldataByPersonalId;
     private JobsEntity jobsByJobId;
-    private List<EmployeeDepartmentEntity> employeeDepartmentsById;
+//    private List<EmployeeDepartmentEntity> employeeDepartmentsById;
     private List<EmployeejobsHistoryEntity> employeejobsHistoriesById;
 
     private Integer tmpPersonalId;
@@ -89,14 +89,14 @@ public class EmployeeEntity {
         this.jobsByJobId = jobsByJobId;
     }
 
-    @OneToMany(mappedBy = "employeeByEmployeeId", fetch = FetchType.EAGER)
-    public List<EmployeeDepartmentEntity> getEmployeeDepartmentsById() {
-        return employeeDepartmentsById;
-    }
-
-    public void setEmployeeDepartmentsById(List<EmployeeDepartmentEntity> employeeDepartmentsById) {
-        this.employeeDepartmentsById = employeeDepartmentsById;
-    }
+//    @OneToMany(mappedBy = "employeeByEmployeeId", fetch = FetchType.EAGER)
+//    public List<EmployeeDepartmentEntity> getEmployeeDepartmentsById() {
+//        return employeeDepartmentsById;
+//    }
+//
+//    public void setEmployeeDepartmentsById(List<EmployeeDepartmentEntity> employeeDepartmentsById) {
+//        this.employeeDepartmentsById = employeeDepartmentsById;
+//    }
 
     @OneToMany(mappedBy = "employeeByEmployeeId", fetch = FetchType.EAGER)
     public List<EmployeejobsHistoryEntity> getEmployeejobsHistoriesById() {

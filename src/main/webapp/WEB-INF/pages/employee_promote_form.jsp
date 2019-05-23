@@ -18,26 +18,8 @@
         <form:options items="${jobsList}" itemValue="id" itemLabel="function"/>
     </form:select><br>
 
-    <%--<b>Телефон</b><br>--%>
-    <%--<form:input path="phone" value="${personalData.phone}"/><br>--%>
-
-    <%--<b>Email</b><br>--%>
-    <%--<form:input path="email" value="${personalData.email}"/><br>--%>
-
-    <%--<b>Адрес</b><br>--%>
-    <%--<form:input path="address" value="${personalData.address}"/><br>--%>
-
-    <%--<b>Образование</b><br>--%>
-    <%--<form:input path="education" value="${personalData.education}"/><br>--%>
-
-    <%--<b>О себе</b><br>--%>
-    <%--<form:textarea path="selfDescription" value="${personalData.selfDescription}"/><br>--%>
-
     <form:button value="employee_promote">Готово!</form:button>
 </form:form>
 <body>
-
-<%--<c:forEach items="${jobsList}" var="item"> i </c:forEach>--%>
-
 </body>
 </html>
