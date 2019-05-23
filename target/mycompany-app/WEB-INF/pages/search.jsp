@@ -3,6 +3,8 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html>
+<head><title>Поиск</title></head>
+
 <body>
 <h2> Поиск по сотрудникам </h2>
 <h3><a href="${pageContext.request.contextPath}/company/main">На главную</a></h3>

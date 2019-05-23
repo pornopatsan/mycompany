@@ -7,11 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44395af1-b6c2-4231-9ac6-487a865992fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/selenium/ProfileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/newEmployeeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/MainControllerTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mycompany-app/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/selenium/newEmployeeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/selenium/MainControllerTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -98,11 +99,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/selenium/MainControllerTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/selenium/ProfileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="558">
+              <caret line="123" lean-forward="true" selection-start-line="119" selection-start-column="12" selection-end-line="123" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/selenium/ProfileSearchTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,19 +124,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new_employee_form.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="90" column="8" lean-forward="true" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
+            <state relative-caret-position="75">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -169,9 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/company/dao/AccountsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/company/dao/OfficeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/company/dao/LocationDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/service/OfficeService.java" />
         <option value="$PROJECT_DIR$/src/test/java/company/dao/OfficeDaoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/company/dao/PersonaldataDaoTest.java" />
@@ -207,7 +208,6 @@
         <option value="$PROJECT_DIR$/src/main/java/company/controller/ProfileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/dao/EmployeeDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/company/dao/EmployeedepartmentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/hibernate/EmployeeEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/company/controller/EmployeeSearchController.java" />
@@ -220,6 +220,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/test/java/selenium/MainControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/ProfileTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/ProfilesearchTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/ProfileSearchTest.java" />
       </list>
     </option>
   </component>
@@ -392,7 +396,7 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="b572e24d-c2b7-4407-8eb3-ba55df456bc1" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558631481340" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558639482904" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -445,7 +449,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in mycompany">
+  <component name="RunManager" selected="JUnit.ProfileSearchTest.addAndUpdateAndDeleteEmployee">
     <configuration name="GlassFish 5.0.0 + Build" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 5.0.0" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/mycompany-app/company/main" />
       <option name="BROWSER_ID" value="e5120d43-2c3f-47ef-9f26-65e539e05186" />
@@ -610,7 +614,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileSearchTest.addAndUpdateAndDeleteEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mycompany" />
       <extension name="coverage">
         <pattern>
@@ -619,8 +623,42 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="selenium" />
-      <option name="MAIN_CLASS_NAME" value="selenium.MainControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="selenium.ProfileSearchTest" />
+      <option name="METHOD_NAME" value="addAndUpdateAndDeleteEmployee" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProfileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mycompany" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.ProfileTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProfileTest.UpdateEmployeeDepartments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mycompany" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.ProfileTest" />
+      <option name="METHOD_NAME" value="UpdateEmployeeDepartments" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -702,13 +740,17 @@
     <list>
       <item itemvalue="GlassFish Server.GlassFish 5.0.0 + Build" />
       <item itemvalue="JUnit.All in mycompany" />
+      <item itemvalue="JUnit.ProfileTest" />
+      <item itemvalue="JUnit.ProfileTest.UpdateEmployeeDepartments" />
       <item itemvalue="Tomcat Server.Tomcat 7.0.93" />
-      <item itemvalue="JUnit.MainControllerTest" />
+      <item itemvalue="JUnit.ProfileSearchTest.addAndUpdateAndDeleteEmployee" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProfileSearchTest.addAndUpdateAndDeleteEmployee" />
+        <item itemvalue="JUnit.ProfileTest.UpdateEmployeeDepartments" />
+        <item itemvalue="JUnit.ProfileTest" />
         <item itemvalue="JUnit.All in mycompany" />
-        <item itemvalue="JUnit.MainControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -744,39 +786,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainControllerTest - 2019.05.23 at 20h 01m 37s.xml">
-      <configuration name="MainControllerTest" configurationId="JUnit" />
+    <history-entry file="ProfileTest - 2019.05.23 at 21h 16m 25s.xml">
+      <configuration name="ProfileTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainControllerTest - 2019.05.23 at 20h 01m 55s.xml">
-      <configuration name="MainControllerTest" configurationId="JUnit" />
+    <history-entry file="ProfileTest_UpdateEmployeeDepartments - 2019.05.23 at 21h 56m 11s.xml">
+      <configuration name="ProfileTest.UpdateEmployeeDepartments" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainControllerTest - 2019.05.23 at 20h 02m 12s.xml">
-      <configuration name="MainControllerTest" configurationId="JUnit" />
+    <history-entry file="ProfileTest_UpdateEmployeeDepartments - 2019.05.23 at 21h 57m 04s.xml">
+      <configuration name="ProfileTest.UpdateEmployeeDepartments" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainControllerTest - 2019.05.23 at 20h 02m 34s.xml">
-      <configuration name="MainControllerTest" configurationId="JUnit" />
+    <history-entry file="ProfileTest_UpdateEmployeeDepartments - 2019.05.23 at 21h 59m 19s.xml">
+      <configuration name="ProfileTest.UpdateEmployeeDepartments" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainControllerTest - 2019.05.23 at 20h 03m 00s.xml">
-      <configuration name="MainControllerTest" configurationId="JUnit" />
+    <history-entry file="ProfileTest_UpdateEmployeeDepartments - 2019.05.23 at 22h 01m 41s.xml">
+      <configuration name="ProfileTest.UpdateEmployeeDepartments" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainControllerTest - 2019.05.23 at 20h 05m 16s.xml">
-      <configuration name="MainControllerTest" configurationId="JUnit" />
+    <history-entry file="ProfileTest_UpdateEmployeeDepartments - 2019.05.23 at 22h 04m 20s.xml">
+      <configuration name="ProfileTest.UpdateEmployeeDepartments" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainControllerTest - 2019.05.23 at 20h 05m 47s.xml">
-      <configuration name="MainControllerTest" configurationId="JUnit" />
+    <history-entry file="ProfileTest_UpdateEmployeeDepartments - 2019.05.23 at 22h 06m 30s.xml">
+      <configuration name="ProfileTest.UpdateEmployeeDepartments" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainControllerTest - 2019.05.23 at 20h 06m 38s.xml">
-      <configuration name="MainControllerTest" configurationId="JUnit" />
+    <history-entry file="ProfileTest_UpdateEmployeeDepartments - 2019.05.23 at 22h 10m 49s.xml">
+      <configuration name="ProfileTest.UpdateEmployeeDepartments" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_mycompany - 2019.05.23 at 20h 10m 23s.xml">
-      <configuration name="All in mycompany" configurationId="JUnit" />
+    <history-entry file="ProfileTest_UpdateEmployeeDepartments - 2019.05.23 at 22h 14m 25s.xml">
+      <configuration name="ProfileTest.UpdateEmployeeDepartments" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_mycompany - 2019.05.23 at 20h 11m 05s.xml">
-      <configuration name="All in mycompany" configurationId="JUnit" />
+    <history-entry file="ProfileTest_UpdateEmployeeDepartments - 2019.05.23 at 22h 23m 32s.xml">
+      <configuration name="ProfileTest.UpdateEmployeeDepartments" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183016000" />
+    <option name="totallyTimeSpent" value="190014000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -815,7 +857,7 @@
       <window_info anchor="bottom" id="Database Console" order="10" weight="0.27704918" />
       <window_info anchor="bottom" id="Message" order="11" />
       <window_info anchor="bottom" id="Find" order="12" weight="0.59016395" />
-      <window_info active="true" anchor="bottom" id="Run" order="13" visible="true" weight="0.4630137" />
+      <window_info anchor="bottom" id="Run" order="13" weight="0.4630137" />
       <window_info anchor="bottom" id="Debug" order="14" weight="0.66849315" />
       <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
@@ -923,13 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/personaldata">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/JobsDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
@@ -948,20 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/jobs">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/employee_department">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1083,13 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/company/dao/OfficeDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1152,13 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1215">
           <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new_employee_personaldata_form.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="25" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1245,24 +1252,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/4.0.0-alpha-1/selenium-api-4.0.0-alpha-1.jar!/org/openqa/selenium/By.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="260" selection-start-line="260" selection-end-line="260" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/jobs">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/employee_department">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.1/selenium-support-2.53.1.jar!/org/openqa/selenium/support/ui/WebDriverWait.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3e97aa0f-6f6c-4020-91ec-2e8cfcc0cf1d/database/pracbackend/schema/public/table/personaldata">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new_employee_personaldata_form.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new_employee_form.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="135">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/ProfileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="123" lean-forward="true" selection-start-line="119" selection-start-column="12" selection-end-line="123" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="90" column="8" lean-forward="true" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
+        <state relative-caret-position="75">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/MainControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/ProfileSearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
