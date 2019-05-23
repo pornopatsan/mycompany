@@ -3,9 +3,10 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html>
+<head><title>Главная</title></head>
 <body>
 <h2> (DEMO) Пользователи </h2>
-<a href="${pageContext.request.contextPath}/company/new_employee_form">Новвый Работник</a><br>
+<a href="${pageContext.request.contextPath}/company/new_employee_form">Новый Работник</a><br>
 <a href="${pageContext.request.contextPath}/company/search">Искать работников</a><br>
 
 <table width="60%">
@@ -78,7 +79,7 @@
                     <td><c:out value="${item.personaldataByPersonalId.firstName}"/><br></td>
                     <td><c:out value="${item.personaldataByPersonalId.lastName}"/><br></td>
                     <td><c:out value="${item.personaldataByPersonalId.email}"/><br></td>
-                    <td><a href="${pageContext.request.contextPath}/company/department/${item.id}">
+                    <td><a href="${pageContext.request.contextPath}/company/profile/${item.id}">
                         <c:out value="${item.id}"/><br>
                     </a></td>
                 </tr>
