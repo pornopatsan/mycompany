@@ -45,6 +45,7 @@ public class ProfileController {
 
             List<EmployeejobsHistoryEntity> jh = res.getEmployeejobsHistoriesById();
             map.addAttribute("jobsHistory", jh);
+            map.addAttribute("departments", dService.findByEmployee(res));
             return "profile";
         } catch (Exception e) {
             return "redirect:/company/main";

@@ -2,6 +2,7 @@ package company.service;
 
 import company.dao.DepartmentDao;
 import company.hibernate.DepartmentEntity;
+import company.hibernate.EmployeeEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -30,4 +31,9 @@ public class DepartmentService {
     public List<DepartmentEntity> findAll() {
         return dao.findAll();
     }
+
+    public List<DepartmentEntity> findByEmployee(EmployeeEntity employee) {
+        return dao.findByEmployee(employee);
+    }
+
 }

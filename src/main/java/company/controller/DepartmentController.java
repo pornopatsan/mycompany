@@ -4,6 +4,7 @@ import company.hibernate.DepartmentEntity;
 import company.hibernate.EmployeeDepartmentEntity;
 import company.hibernate.EmployeeEntity;
 import company.service.DepartmentService;
+import company.service.EmployeeService;
 import org.dom4j.bean.BeanAttributeList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,13 +23,16 @@ public class DepartmentController {
     @Autowired
     DepartmentService departmentService;
 
+    @Autowired
+    EmployeeService employeeService;
+
     @RequestMapping(value = "/department/{id}", method = RequestMethod.GET)
     public String profilePage(ModelMap map, @PathVariable int id) {
         DepartmentEntity res = departmentService.findById(id);
         map.addAttribute("department", res);
         map.addAttribute("departments", res.getDepartmentsById());
-        List<EmployeeDepartmentEntity> employeeDepartmentEntities = res.getEmployeeDepartmentsById();
-        map.addAttribute("curDepartmentEmployee", getUniqueEmployee(employeeDepartmentEntities));
+        List<EmployeeEntity> employee = employeeService.findByDepartment(res);
+        map.addAttribute("employee", employee);
         return "department";
     }
 

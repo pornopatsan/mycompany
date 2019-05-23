@@ -12,7 +12,6 @@ public class DepartmentEntity {
     private DepartmentEntity departmentByHeadId;
     private OfficeEntity officeByOfficeId;
     private List<DepartmentEntity> departmentsById;
-    private List<EmployeeDepartmentEntity> employeeDepartmentsById;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -94,14 +93,5 @@ public class DepartmentEntity {
 
     public void setDepartmentsById(List<DepartmentEntity> departmentsById) {
         this.departmentsById = departmentsById;
-    }
-
-    @OneToMany(mappedBy = "departmentByDepartmentId", fetch = FetchType.EAGER)
-    public List<EmployeeDepartmentEntity> getEmployeeDepartmentsById() {
-        return employeeDepartmentsById;
-    }
-
-    public void setEmployeeDepartmentsById(List<EmployeeDepartmentEntity> employeeDepartmentsById) {
-        this.employeeDepartmentsById = employeeDepartmentsById;
     }
 }

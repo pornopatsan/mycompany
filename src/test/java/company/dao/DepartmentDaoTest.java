@@ -12,10 +12,12 @@ import static org.junit.Assert.*;
 public class DepartmentDaoTest {
 
     private DepartmentDao _dao;
+    private EmployeeDao _e_dao;
 
     @Before
     public void setUp() throws Exception {
         _dao = new DepartmentDao();
+        _e_dao = new EmployeeDao();
     }
 
     @After
@@ -66,6 +68,17 @@ public class DepartmentDaoTest {
         assertEquals("DESCRIPTION", _dao.findById(1).getDescription());
         tmp.setDescription(prev);
         _dao.update(tmp);
+    }
+
+    @Test
+    public void getEmployeeByDepartmentID() {
+        assertEquals("Sapaev", _e_dao.findById(1).getPersonaldataByPersonalId().getLastName());
+        List<DepartmentEntity> tmp = _dao.findByEmployee(_e_dao.findById(1));
+        assertNotNull(tmp);
+        for (DepartmentEntity e : tmp) {
+            assertNotNull(e);
+//            assertEquals("Sapaev", e.getPersonaldataByPersonalId().getLastName());
+        }
     }
 
 }

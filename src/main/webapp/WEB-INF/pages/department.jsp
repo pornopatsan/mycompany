@@ -62,7 +62,7 @@
         <th>Имя</th>
         <th>Фамилия</th>
     </tr>
-    <c:forEach items="${curDepartmentEmployee}" var="item">
+    <c:forEach items="${employee}" var="item">
         <tr>
             <td>
                 <a href="${pageContext.request.contextPath}/company/profile/${item.id}">

@@ -70,16 +70,16 @@
 </table>
 <p spellcheck="true">О себе: <c:out value="${personaldata.selfDescription}"/></p>
 
-<%--<table border="0" width="50%">--%>
-    <%--<caption>Отделения, в которых работает сотрудник</caption>--%>
-    <%--<c:forEach items="${employee.employeeDepartmentsById}" var="item">--%>
-        <%--<tr>--%>
-            <%--<td><a href="${pageContext.request.contextPath}/company/department/${item.departmentByDepartmentId.id}">--%>
-                <%--<c:out value="${item.departmentByDepartmentId.name}"/>--%>
-            <%--</a></td>--%>
-        <%--</tr>--%>
-    <%--</c:forEach>--%>
-<%--</table>--%>
+<table border="0" width="50%">
+    <caption>Отделения, в которых работает сотрудник</caption>
+    <c:forEach items="${departments}" var="item">
+        <tr>
+            <td><a href="${pageContext.request.contextPath}/company/department/${item.id}">
+                <c:out value="${item.name}"/>
+            </a></td>
+        </tr>
+    </c:forEach>
+</table>
 
 <table border="1" width="50%">
     <caption>История Должностей</caption>

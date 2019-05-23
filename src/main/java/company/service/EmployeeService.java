@@ -1,6 +1,7 @@
 package company.service;
 
 import company.dao.EmployeeDao;
+import company.hibernate.DepartmentEntity;
 import company.hibernate.EmployeeEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -30,4 +31,9 @@ public class EmployeeService {
     public List<EmployeeEntity> findAll() {
         return dao.findAll();
     }
+
+    public List<EmployeeEntity> findByDepartment(DepartmentEntity department) {
+        return dao.findByDepartment(department);
+    }
+
 }
