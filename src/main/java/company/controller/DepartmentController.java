@@ -71,7 +71,9 @@ public class DepartmentController {
             ModelAndView modelAndView = new ModelAndView("redirect:department/");
             DepartmentEntity department = departmentService.findById(id);
             DepartmentEntity head = department.getDepartmentByHeadId();
-            assert head != null;
+            if (head == null || department.getId() == 1) {
+                throw new Exception("Try to delete main head");
+            }
             for (DepartmentEntity d: departmentService.findByHead(department)) {
                 d.setDepartmentByHeadId(head);
                 departmentService.update(d);
