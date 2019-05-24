@@ -42,7 +42,7 @@ public class ProfileTest {
 
             driver.findElement(By.tagName("button")).click();
             wait = new WebDriverWait(driver, 10);
-            wait.until(ExpectedConditions.titleIs("Новый Работник"));
+            wait.until(ExpectedConditions.urlContains("new_employee_personaldata"));
 
             WebElement salary = driver.findElement(By.id("salary"));
             salary.sendKeys("1500");
